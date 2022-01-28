@@ -1,6 +1,7 @@
 [submodule "octomap_ros"]
 	path = octomap_ros
 	url = https://github.com/Capstone-W3/octomap_ros.git
+	branch = kinetic-devel
 [submodule "diff_drive_mapping_robot"]
 	path = diff_drive_mapping_robot
 	url = https://github.com/Capstone-W3/diff_drive_mapping_robot.git
