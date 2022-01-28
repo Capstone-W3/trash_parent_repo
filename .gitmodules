@@ -1,0 +1,9 @@
+[submodule "octomap_ros"]
+	path = octomap_ros
+	url = https://github.com/Capstone-W3/octomap_ros.git
+[submodule "diff_drive_mapping_robot"]
+	path = diff_drive_mapping_robot
+	url = https://github.com/Capstone-W3/diff_drive_mapping_robot.git
+[submodule "ORB-SLAM2_ROS"]
+	path = ORB-SLAM2_ROS
+	url = https://github.com/Capstone-W3/ORB-SLAM2_ROS.git
