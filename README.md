@@ -11,5 +11,6 @@ To learn more about submodules, this link may help: https://git-scm.com/book/en/
 
 
 $ sudo apt-get install ros-kinetic-desktop-full
+
 $ sudo apt-get install ros-kinetic-catkin python-catkin-tools 
 
