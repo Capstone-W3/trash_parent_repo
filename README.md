@@ -3,7 +3,7 @@ The development environment for the UGV
 
 
 This repo contains submodules (forked from the original open source repos)
-Run the following command after cloning
+Run the following command after cloning, and whenever you want the submodules update
 
 git submodule update --init --recursive
 
