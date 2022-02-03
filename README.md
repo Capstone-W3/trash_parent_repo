@@ -61,3 +61,9 @@ roslaunch orb_slam2_ros raspicam_mono_wide.launch
 
 `sudo apt-get install ros-kinetic-move-base-msgs`
 
+````
+git clone https://github.com/WiringPi/WiringPi
+cd WiringPi
+./build
+````
+
