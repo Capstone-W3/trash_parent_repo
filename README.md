@@ -36,6 +36,8 @@ To learn more about submodules, this link may help: https://git-scm.com/book/en/
 
 `source devel/setup.bash`
 
+If these last 3 fail, try them in another order
+
 ````
 roslaunch diff_drive_mapping_robot robot_offline.launch
 rosbag play ${PATH TO THE BAG FILE}
