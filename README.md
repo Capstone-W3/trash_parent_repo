@@ -51,7 +51,9 @@ roslaunch orb_slam2_ros raspicam_mono_wide.launch
 
 `sudo apt-get install ros-kinetic-desktop-full`
 
-`sudo apt-get install ros-kinetic-catkin python-catkin-tools` 
+`sudo apt-get install ros-kinetic-catkin python-catkin-tools`
+
+`sudo apt-get install ros-kinetic-catkin python-controller-manager`
 
 `sudo apt-get install ros-kinetic-pid`
 
