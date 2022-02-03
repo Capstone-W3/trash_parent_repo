@@ -65,6 +65,10 @@ roslaunch orb_slam2_ros raspicam_mono_wide.launch
 
 `sudo apt-get install ros-kinetic-move-base-msgs`
 
+`sudo apt-get install ros-kinetic-octomap-rviz-plugins`
+
+`sudo apt-get install ros-kinetic-diff-drive-controller`
+
 ````
 git clone https://github.com/WiringPi/WiringPi
 cd WiringPi
