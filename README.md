@@ -53,6 +53,8 @@ roslaunch orb_slam2_ros raspicam_mono_wide.launch
 
 `sudo apt-get install ros-kinetic-catkin python-catkin-tools` 
 
+`sudo apt-get install ros-kinetic-pid`
+
 ### For only robot example
 
 `sudo apt-get install ros-kinetic-move-base-msgs`
