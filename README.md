@@ -21,6 +21,19 @@ echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bas
 ````
 Check that everything worked using `cmake --version`
 
+Then install version 3.3.9 of Eigen3 because it doesn't recognize the base version
+````
+cd ~
+wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
+tar -xzvf eigen-3.3.9.tar.gz 
+cd eigen-3.3.9
+
+mkdir build && cd build
+cmake ..
+sudo make install
+````
+
+
 Now can install Pangolin (though locating eigen is not currently working)
 
 ````
@@ -34,7 +47,7 @@ cd Pangolin
 
 # Configure and build
 mkdir build && cd build
-cmake ..
+cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
 cmake --build .
 
 # GIVEME THE PYTHON STUFF!!!! (Check the output to verify selected python version)
