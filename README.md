@@ -44,7 +44,13 @@ cmake --build . -t pypangolin_pip_install
 ctest
 ````
 
+###### OpenCV
 
+https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
+
+````
+git clone https://github.com/opencv/opencv
+git -C opencv checkout 3.4
 
 
 
