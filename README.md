@@ -1,3 +1,59 @@
+
+## Trying different approach and tracking required steps
+
+### Using regular ORB-SLAM2
+
+#### Dependencies and their dependencies
+
+###### Pangolin
+
+Requires updated version of CMake, but many way of doing this will break a pre-installed ros implementation
+
+From https://askubuntu.com/a/976700. Download cmake (https://cmake.org/download/) I used cmake-3.22.2.tar.gz
+
+````
+cd $CMAKE_DOWNLOAD_PATH
+./configure
+make
+sudo make install
+export PATH=$HOME/cmake-install/bin:$PATH
+export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH
+````
+Check that everything worked using `cmake --version`
+
+Now can install Pangolin (though locating eigen is not currently working)
+
+````
+# Get Pangolin
+cd ~/your_fav_code_directory
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
+cd Pangolin 
+
+# Install dependencies (as described above, or your preferred method)
+./scripts/install_prerequisites.sh recommended
+
+# Configure and build
+mkdir build && cd build
+cmake ..
+cmake --build .
+
+# GIVEME THE PYTHON STUFF!!!! (Check the output to verify selected python version)
+cmake --build . -t pypangolin_pip_install
+
+# Run me some tests! (Requires Catch2 which must be manually installed on Ubuntu.)
+ctest
+````
+
+
+
+
+
+
+
+
+
+
+
 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
 
 # ORB-SLAM 2 Workspace
