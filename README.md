@@ -16,8 +16,8 @@ cd $CMAKE_DOWNLOAD_PATH
 ./configure
 make
 sudo make install
-export PATH=$HOME/cmake-install/bin:$PATH
-export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH
+echo 'export PATH=$HOME/cmake-install/bin:$PATH' >> ~/.bashrc
+echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bashrc
 ````
 Check that everything worked using `cmake --version`
 
