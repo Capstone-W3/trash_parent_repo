@@ -57,6 +57,8 @@ cmake --build . -t pypangolin_pip_install
 ctest
 ````
 
+Currently trying to resolve issue https://github.com/stevenlovegrove/Pangolin/issues/714
+
 ###### OpenCV
 
 https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
@@ -64,6 +66,12 @@ https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
 ````
 git clone https://github.com/opencv/opencv
 git -C opencv checkout 3.4
+
+
+
+
+
+
 
 
 
