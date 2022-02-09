@@ -122,6 +122,12 @@ chmod +x build.sh
 Then for ROS compatability
 `./build_ros.sh`
 
+Then to run https://github.com/raulmur/ORB_SLAM2#running-monocular-node
+
+rosrun ORB_SLAM2 Mono PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE
+rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/TUMX.yaml
+
+
 ##### Issues 
 
 ###### For base
