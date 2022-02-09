@@ -90,11 +90,13 @@ make -j4
 ````
 
 
-##### Build ORB-SLAM2
+#### Build ORB-SLAM2
 
 Inside the catkin workspace 
 
 `git clone https://github.com/raulmur/ORB_SLAM2.git ORB_SLAM2`
+
+For base ORB-SLAM2 
 
 ````
 cd ORB_SLAM2
@@ -102,7 +104,12 @@ chmod +x build.sh
 ./build.sh
 ````
 
-###### Issues
+Then for ROS compatability
+`./build_ros.sh`
+
+##### Issues 
+
+###### For base
 
 If failing due to do `‘usleep’ was not declared`
 
@@ -114,7 +121,38 @@ https://github.com/raulmur/ORB_SLAM2/issues/305
 
 Just remove the `-j` options from all `make` instructions in `build.sh` and in `build_ros.sh`
 
+###### For ros compatability
 
+if getting
+````
+Consolidate compiler generated dependencies of target Stereo
+[ 66%] Linking CXX executable ../Stereo
+/usr/bin/ld: CMakeFiles/Stereo.dir/src/ros_stereo.cc.o: undefined reference to symbol '_ZN5boost6system15system_categoryEv'
+/usr/lib/x86_64-linux-gnu/libboost_system.so: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+CMakeFiles/Stereo.dir/build.make:229: recipe for target '../Stereo' failed
+make[2]: *** [../Stereo] Error 1
+CMakeFiles/Makefile2:717: recipe for target 'CMakeFiles/Stereo.dir/all' failed
+make[1]: *** [CMakeFiles/Stereo.dir/all] Error 2
+Makefile:135: recipe for target 'all' failed
+make: *** [all] Error 2
+````
+
+https://github.com/raulmur/ORB_SLAM2/issues/494
+
+Final fix: in `ORB_SLAM2/Examples/ROS/ORB_SLAM2/CMakeList.txt` add `-lboost_system` to `set` so that it looks like
+
+````
+set(LIBS 
+${OpenCV_LIBS} 
+${EIGEN3_LIBS}
+${Pangolin_LIBRARIES}
+${PROJECT_SOURCE_DIR}/../../../Thirdparty/DBoW2/lib/libDBoW2.so
+${PROJECT_SOURCE_DIR}/../../../Thirdparty/g2o/lib/libg2o.so
+${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2.so
+-lboost_system
+)
+````
 
 
 
