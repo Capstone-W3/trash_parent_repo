@@ -124,8 +124,9 @@ Then for ROS compatability
 
 Then to run https://github.com/raulmur/ORB_SLAM2#running-monocular-node
 
-rosrun ORB_SLAM2 Mono PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE
-rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/TUMX.yaml
+`rosrun ORB_SLAM2 Mono PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE`
+
+`rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/TUM1.yaml`
 
 
 ##### Issues 
