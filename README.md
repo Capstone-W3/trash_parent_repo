@@ -90,6 +90,29 @@ make -j4
 ````
 
 
+##### Build ORB-SLAM2
+
+Inside the catkin workspace 
+
+`git clone https://github.com/raulmur/ORB_SLAM2.git ORB_SLAM2`
+
+````
+cd ORB_SLAM2
+chmod +x build.sh
+./build.sh
+````
+
+###### Issues
+
+If failing due to do `‘usleep’ was not declared`
+
+https://github.com/raulmur/ORB_SLAM2/pull/932 and https://github.com/raulmur/ORB_SLAM2/pull/824
+
+If failing due to internal compiler error
+
+https://github.com/raulmur/ORB_SLAM2/issues/305
+
+Just remove the `-j` options from all `make` instructions in the build file
 
 
 
@@ -99,8 +122,6 @@ make -j4
 
 
 
-
-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
 
 # ORB-SLAM 2 Workspace
 The development environment for the UGV
