@@ -112,7 +112,7 @@ If failing due to internal compiler error
 
 https://github.com/raulmur/ORB_SLAM2/issues/305
 
-Just remove the `-j` options from all `make` instructions in the build file
+Just remove the `-j` options from all `make` instructions in `build.sh` and in `build_ros.sh`
 
 
 
