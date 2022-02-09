@@ -46,7 +46,7 @@ cd Pangolin
 ./scripts/install_prerequisites.sh recommended
 
 # Configure and build
-mkdir build && cd build
+mkdir -p build && cd build
 cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
 cmake --build .
 
@@ -59,14 +59,33 @@ ctest
 
 Currently trying to resolve issue https://github.com/stevenlovegrove/Pangolin/issues/714
 
+Circumvented problem by changing branches for building (not doing it right away so we can still use the `install_prerequisites.sh` script)
+
+````
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
+cd Pangolin
+./scripts/install_prerequisites.sh recommended
+git checkout v0.6
+
+mkdir -p build && cd build
+cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
+cmake --build .
+````
+
 ###### OpenCV
 
 https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
 
+https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
+
 ````
 git clone https://github.com/opencv/opencv
 git -C opencv checkout 3.4
+cd opencv
 
+mkdir -p build && cd build
+cmake ..
+make -j4
 
 ````
 
