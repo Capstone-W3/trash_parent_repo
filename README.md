@@ -178,7 +178,7 @@ ${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2.so
 
 
 
-
+To change image data from compressed to raw https://answers.ros.org/question/35183/compressed-image-to-image/
 
 
 
