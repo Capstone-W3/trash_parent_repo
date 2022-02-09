@@ -103,6 +103,7 @@ make -j4
 
 ````
 
+If having issues with `make -j4` freezing the machine, remove the parallel option and just run `make`
 
 #### Build ORB-SLAM2
 
