@@ -21,7 +21,7 @@ echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bas
 ````
 Check that everything worked using `cmake --version`
 
-Then install version 3.3.9 of Eigen3 because it doesn't recognize the base version
+Then install version 3.3.9 of Eigen3 because it doesn't recognize the base version https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html
 ````
 cd ~
 wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
