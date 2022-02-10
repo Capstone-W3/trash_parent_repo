@@ -98,9 +98,8 @@ git -C opencv checkout 3.4
 cd opencv
 
 mkdir -p build && cd build
-cmake ..
-make -j4
-
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .
+sudo make install
 ````
 
 If having issues with `make -j4` freezing the machine, remove the parallel option and just run `make`
