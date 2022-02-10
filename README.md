@@ -180,6 +180,12 @@ ${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2.so
 To change image data from compressed to raw https://answers.ros.org/question/35183/compressed-image-to-image/
 
 
+In pure ORB-SLAM3
+
+`./Monocular/mono_euroc ../Vocabulary/ORBvoc.txt ./Monocular/EuRoC.yaml ~/Downloads/mav0 ./Monocular/EuRoC_TimeStamps/V101.txt dataset-V101_mono`
+
+
+
 
 
 # ORB-SLAM 2 Workspace
