@@ -116,13 +116,7 @@ And has dependency
 `sudo apt-get install ros-kinetic-hector-trajectory-server`
 
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
 
 
 ## Trying different approach and tracking required steps
