@@ -1,3 +1,123 @@
+# ORB-SLAM3 and its ros wrapper
+
+## ORB-SLAM3
+
+(Will remove all the `clone` commands once repo structure is set up)
+
+### Dependencies and their dependencies
+
+#### Pangolin
+
+##### CMake
+
+Requires updated version of CMake, but many way of doing this will break a pre-installed ros implementation
+
+````
+wget https://cmake.org/files/v3.22/cmake-3.22.2-Linux-x86_64.tar.gz
+tar xzf cmake-3.22.2-Linux-x86_64.tar.gz
+rm -rf cmake-3.22.2-Linux-x86_64.tar.gz
+cd cmake-3.22.3-Linux-x86_64
+./configure
+make
+sudo make install
+echo 'export PATH=$HOME/cmake-install/bin:$PATH' >> ~/.bashrc
+echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bashrc
+````
+
+Check that everything worked using `cmake --version`
+
+##### Eigen3
+
+Install version 3.3.9 of Eigen3 because it doesn't recognize the base version https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html
+
+````
+cd ~
+wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
+tar -xzvf eigen-3.3.9.tar.gz 
+cd eigen-3.3.9
+
+mkdir build && cd build
+cmake ..
+sudo make install
+````
+
+##### Pangolin itself
+
+````
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
+cd Pangolin
+./scripts/install_prerequisites.sh recommended
+git checkout v0.6
+
+mkdir -p build && cd build
+cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
+cmake --build .
+````
+
+#### OpenCV
+
+(need to remove all the `-j*` flags in `CMakeLists.txt` on our forked repo)
+
+
+````
+git clone https://github.com/opencv/opencv
+git -C opencv checkout 3.4
+cd opencv
+
+mkdir -p build && cd build
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .
+sudo make install
+````
+
+### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
+
+(need to remove all the `-j*` flags in `build.sh` on our forked repo)
+
+We are using `v0.3` due to limitations from the ros wrapper but otherwise we could use `v0.4` (can't remember if v1.0 works but think they phased out Ubuntu 16.04 and ros-kinetic)
+
+````
+git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3
+cd ORB_SLAM3
+git checkout v0.3
+chmod +x build.sh
+./build.sh
+````
+
+#### Downloading datasets
+
+For EuRoC datasets go to http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/ and download
+
+If using http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/, download the zip file and unzip it in downloads
+
+#### Run sample data
+
+Then from `ORB_SLAM3` try
+
+````
+cd Examples
+--------
+````
+
+### orb_slam3_ros_wrapper ([repo](https://github.com/thien94/orb_slam3_ros_wrapper))
+
+must be contained within the catkin workspace
+
+````
+cd catkin_ws/src
+git clone https://github.com/thien94/orb_slam3_ros_wrapper.git
+
+
+````
+
+Follow steps from [here](https://github.com/thien94/orb_slam3_ros_wrapper#2-orb_slam3_ros_wrapper-this-package)
+
+And has dependency 
+
+`sudo apt-get install ros-kinetic-hector-trajectory-server`
+
+
+
+
 
 ## Trying different approach and tracking required steps
 
@@ -106,7 +226,7 @@ If having issues with `make -j4` freezing the machine, remove the parallel optio
 
 #### Build ORB-SLAM2
 
-Inside the catkin workspace 
+Inside the catkin workspace
 
 `git clone https://github.com/raulmur/ORB_SLAM2.git ORB_SLAM2`
 
