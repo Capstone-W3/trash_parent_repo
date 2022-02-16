@@ -62,9 +62,9 @@ cmake --build .
 (if computer is capable of handling multi-thread run with something like `sudo make -j4 install`)
 
 
-````
 ~~git clone https://github.com/opencv/opencv~~
 ~~git -C opencv checkout 3.4~~
+````
 cd opencv
 
 mkdir -p build && cd build
@@ -78,10 +78,12 @@ sudo make install
 
 We are using `v0.3` due to limitations from the ros wrapper but otherwise we could use `v0.4` (can't remember if v1.0 works but think they phased out Ubuntu 16.04 and ros-kinetic)
 
+~~git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3~~
+
+~~git -C ORB_SLAM3 checkout v0.3~~
 ````
-git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3
 cd ORB_SLAM3
-git checkout v0.3
+
 chmod +x build.sh
 ./build.sh
 ````
@@ -105,11 +107,10 @@ cd Examples
 
 must be contained within the catkin workspace
 
+~~git clone https://github.com/thien94/orb_slam3_ros_wrapper.git~~
+
 ````
 cd catkin_ws/src
-git clone https://github.com/thien94/orb_slam3_ros_wrapper.git
-
-
 ````
 
 Follow steps from [here](https://github.com/thien94/orb_slam3_ros_wrapper#2-orb_slam3_ros_wrapper-this-package)
