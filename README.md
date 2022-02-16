@@ -10,6 +10,10 @@
   - Look for papers using YOLO with slam and see if they have solutions
   - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
 
+# Clone this repo and its submodules
+
+`git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git
+
 # ORB-SLAM3 and its ros wrapper
 
 ## ORB-SLAM3
