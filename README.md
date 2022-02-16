@@ -58,7 +58,7 @@ cmake --build .
 
 #### OpenCV
 
-(need to remove all the `-j*` flags in `CMakeLists.txt` on our forked repo)
+(if computer is capable of handling multi-thread run with something like `sudo make -j4 install`)
 
 
 ````
