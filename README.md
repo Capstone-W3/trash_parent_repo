@@ -1,3 +1,15 @@
+# TODO
+
+- Get YOLO Darknet setup ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
+  - Should be easy since this version is specifically for Kinetic and Ubunutu 16.04
+- Run YOLO with UAVVaste dataset ([git-repo](https://github.com/UAVVaste/UAVVaste))
+  - This could be super easy but unsure because they almost certainly used a different version of YOLO
+- Try to get YOLO outputs meshing with SLAM
+  - This could be an issue because YOLO will label every single time the object is seen but we want 1 location per object
+  - Need to somehow merge them
+  - Look for papers using YOLO with slam and see if they have solutions
+  - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
+
 # ORB-SLAM3 and its ros wrapper
 
 ## ORB-SLAM3
