@@ -77,6 +77,7 @@ cmake --build .
 
 (if computer is capable of handling multi-thread run with something like `sudo make -j4 install`)
 
+This will take 20+ minutes so be ready to let it run
 
 ~~git clone https://github.com/opencv/opencv~~
 
