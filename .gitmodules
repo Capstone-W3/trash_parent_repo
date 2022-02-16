@@ -20,3 +20,4 @@
 [submodule "catkin_ws/src/orb_slam3_ros_wrapper"]
 	path = catkin_ws/src/orb_slam3_ros_wrapper
 	url = https://github.com/Capstone-W3/orb_slam3_ros_wrapper
+	branch = master
