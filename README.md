@@ -12,7 +12,16 @@
 
 # Clone this repo and its submodules
 
-`git clone --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
+`git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
+
+Then need to go through and checkout to the remote tracking branch in each
+
+`git submodule update --recursive --remote`
+
+OR if git version is 2.23 or greater
+
+`git clone --recurse-submodules --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
+
 
 # ORB-SLAM3 and its ros wrapper
 
