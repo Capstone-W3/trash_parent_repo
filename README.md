@@ -125,10 +125,14 @@ cd Examples
 
 must be contained within the catkin workspace
 
+If the parent repo was not cloned to `$HOME`, follow instructions from above to update CMakeLists.txt with correct path
+
 ~~git clone https://github.com/thien94/orb_slam3_ros_wrapper.git~~
 
 ````
-cd catkin_ws/src
+cd catkin_ws
+catkin init
+catkin build
 ````
 
 Follow steps from [here](https://github.com/thien94/orb_slam3_ros_wrapper#2-orb_slam3_ros_wrapper-this-package)
