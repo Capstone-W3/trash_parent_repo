@@ -8,3 +8,12 @@
 [submodule "ORB-SLAM2_ROS"]
 	path = ORB-SLAM2_ROS
 	url = https://github.com/Capstone-W3/ORB-SLAM2_ROS.git
+[submodule "ORB_SLAM3"]
+	path = ORB_SLAM3
+	url = https://github.com/Capstone-W3/ORB_SLAM3
+[submodule "opencv"]
+	path = opencv
+	url = https://github.com/Capstone-W3/opencv
+[submodule "Pangolin"]
+	path = Pangolin
+	url = https://github.com/stevenlovegrove/Pangolin
