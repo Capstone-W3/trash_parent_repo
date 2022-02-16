@@ -12,7 +12,7 @@
 
 # Clone this repo and its submodules
 
-`git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
+`git clone --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
 # ORB-SLAM3 and its ros wrapper
 
