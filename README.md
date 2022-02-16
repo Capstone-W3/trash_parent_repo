@@ -62,8 +62,8 @@ The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/
 
 The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this will default to the home directory but can be changed
 
+~~git clone --recursive https://github.com/stevenlovegrove/Pangolin.git~~
 ````
-git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
 ./scripts/install_prerequisites.sh recommended
 git checkout v0.6
