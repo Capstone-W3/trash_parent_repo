@@ -43,6 +43,8 @@ sudo make install
 
 ##### Pangolin itself
 
+The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/Pangolin/pull/715) from Pangolin. Waiting to see if this can be resolved and no longer needed
+
 ````
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
