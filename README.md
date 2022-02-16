@@ -121,6 +121,16 @@ And has dependency
 `sudo apt-get install ros-kinetic-hector-trajectory-server`
 
 
+## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.3))
+
+
+
+
+#### YOLO with SLAM
+
+https://link.springer.com/article/10.1007/s00521-021-06764-3
+
+
 &nbsp; 
 
 &nbsp; 
