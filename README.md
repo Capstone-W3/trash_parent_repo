@@ -2,8 +2,6 @@
 
 ## ORB-SLAM3
 
-(Will remove all the `clone` commands once repo structure is set up)
-
 ### Dependencies and their dependencies
 
 #### Pangolin
@@ -13,6 +11,7 @@
 Requires updated version of CMake, but many way of doing this will break a pre-installed ros implementation
 
 ````
+cd $HOME
 wget https://cmake.org/files/v3.22/cmake-3.22.2-Linux-x86_64.tar.gz
 tar xzf cmake-3.22.2-Linux-x86_64.tar.gz
 rm -rf cmake-3.22.2-Linux-x86_64.tar.gz
@@ -31,7 +30,7 @@ Check that everything worked using `cmake --version`
 Install version 3.3.9 of Eigen3 because it doesn't recognize the base version https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html
 
 ````
-cd ~
+cd $HOME
 wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
 tar -xzvf eigen-3.3.9.tar.gz 
 cd eigen-3.3.9
@@ -44,6 +43,8 @@ sudo make install
 ##### Pangolin itself
 
 The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/Pangolin/pull/715) from Pangolin. Waiting to see if this can be resolved and no longer needed
+
+The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this will default to the home directory but can be changed
 
 ````
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
@@ -62,8 +63,8 @@ cmake --build .
 
 
 ````
-git clone https://github.com/opencv/opencv
-git -C opencv checkout 3.4
+~~git clone https://github.com/opencv/opencv~~
+~~git -C opencv checkout 3.4~~
 cd opencv
 
 mkdir -p build && cd build
