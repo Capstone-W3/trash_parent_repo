@@ -1,9 +1,32 @@
 # TODO
 
-- Get YOLO Darknet setup ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
-  - Should be easy since this version is specifically for Kinetic and Ubunutu 16.04
+https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
+
+
+http://tacodataset.org/
+
+Setup of sensors
+
+- All 3 of our cameras need callibration (drone front and bottom and turtlebot)
+  - How to callibrate cameras [using OpenCV](https://docs.opencv.org/3.4/d6/d55/tutorial_table_of_content_calib3d.html), which we already have in the project
+  - Need an orbslam camera yaml file for front facing in [this form](https://github.com/Capstone-W3/ORB_SLAM3/blob/v0.3-beta/Examples/Monocular-Inertial/EuRoC.yaml)
+   - AR Drone front can be found [here](https://github.com/jwangjie/Mapping-ARDrone/blob/master/orb_slam2/Examples/Monocular/ardrone.yaml)
+   - RealSense camera setup file [exists](https://github.com/Capstone-W3/ORB_SLAM3/tree/v1.0-release/Examples/Monocular-Inertial) but in their new format, need to revert to old format
+- To use Monocular-Intertial (camera and imu gives better results), need to get the IMU callibrations on both robots
+- Turtlebot needs gyro and odometry callibration for navigation [here](http://wiki.ros.org/turtlebot_calibration/Tutorials/Calibrate%20Odometry%20and%20Gyro)
+
+Translate ORB-SLAM output from point clouds to octomap for path planning
+- what do we do here
+
+YOLO for our application and SLAM 
+
+- ~~Get YOLO Darknet setup ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))~~
+  - ~~Should be easy since this version is specifically for Kinetic and Ubunutu 16.04~~
 - Run YOLO with UAVVaste dataset ([git-repo](https://github.com/UAVVaste/UAVVaste))
   - This could be super easy but unsure because they almost certainly used a different version of YOLO
+
+
+
 - Try to get YOLO outputs meshing with SLAM
   - This could be an issue because YOLO will label every single time the object is seen but we want 1 location per object
   - Need to somehow merge them
