@@ -167,6 +167,33 @@ And has dependency
 https://link.springer.com/article/10.1007/s00521-021-06764-3
 
 
+#### UAVVaste
+
+requires pip3
+
+`sudo apt-get install python3-pip`
+
+DO NOT run the suggested update command, pip > 21.0 does not support python3.5 and will break the entire system. This happened to me and took a long time to fix because as of Jan 2022 it seems to be impossible to upgrade python versions on Ubuntu 16.04 ([issue](https://github.com/deadsnakes/issues/issues/195)). 
+
+To update versions without breaking everything, `pip install -U "pip<21.0" setuptools`
+
+If you have already broken it like me, you have to install pip from another source
+
+````
+curl -sSL https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
+python3 get-pip.py "pip < 21.0"
+````
+
+Then
+
+````
+git clone https://github.com/UAVVaste/UAVVaste
+pip3 install -r requirements.txt
+python3 main.py
+````
+This script is written using f-strings (which are not supported in python3.5) so lines 15, 18, and 22 need to be changed to not use this format.
+
+
 &nbsp; 
 
 &nbsp; 
