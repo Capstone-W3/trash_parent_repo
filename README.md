@@ -19,8 +19,8 @@ Translate ORB-SLAM output from point clouds to octree with Octomap for path plan
   - [paper of ORB-SLAM2 version](https://github.com/abhineet123/ORB_SLAM2/blob/master/2d-grid-mapping.pdf)
 - Potential Recources
 - https://github.com/charbelias24/3dMapSLAM#24-octomap
-- https://github.com/OctoMap/octomap_mapping/tree/kinetic-devel
-- https://github.com/OctoMap/octomap_ros/tree/kinetic-devel
+- https://github.com/OctoMap/octomap_mapping/tree/kinetic-devel 
+- https://github.com/OctoMap/octomap_ros/tree/kinetic-devel (the above is probably better than this)
 
 
 YOLO for our application and SLAM 
