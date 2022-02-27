@@ -2,6 +2,7 @@
 
 
 http://tacodataset.org/
+https://github.com/IeiuniumLux/Visual-SLAM
 
 Setup of sensors
 
