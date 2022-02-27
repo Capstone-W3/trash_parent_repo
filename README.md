@@ -15,8 +15,12 @@ Setup of sensors
 - To use Monocular-Intertial (camera and imu gives better results), need to get the IMU callibrations on both robots
 - Turtlebot needs gyro and odometry callibration for navigation [here](http://wiki.ros.org/turtlebot_calibration/Tutorials/Calibrate%20Odometry%20and%20Gyro)
 
-Translate ORB-SLAM output from point clouds to octomap for path planning
-- what do we do here
+Translate ORB-SLAM output from point clouds to octree with Octomap for path planning
+- Potential Recources
+- https://github.com/charbelias24/3dMapSLAM#24-octomap
+- https://github.com/OctoMap/octomap_mapping/tree/kinetic-devel
+- https://github.com/OctoMap/octomap_ros/tree/kinetic-devel
+- 
 
 YOLO for our application and SLAM 
 
