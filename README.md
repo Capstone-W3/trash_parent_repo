@@ -1,7 +1,5 @@
 # TODO
 
-https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
-
 
 http://tacodataset.org/
 
@@ -28,6 +26,7 @@ YOLO for our application and SLAM
   - ~~Should be easy since this version is specifically for Kinetic and Ubunutu 16.04~~
 - Run YOLO with UAVVaste dataset ([git-repo](https://github.com/UAVVaste/UAVVaste))
   - This could be super easy but unsure because they almost certainly used a different version of YOLO
+  - [How to train to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
 
 
 
