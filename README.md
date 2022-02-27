@@ -14,6 +14,8 @@ Setup of sensors
 - Turtlebot needs gyro and odometry callibration for navigation [here](http://wiki.ros.org/turtlebot_calibration/Tutorials/Calibrate%20Odometry%20and%20Gyro)
 
 Translate ORB-SLAM output from point clouds to octree with Octomap for path planning
+- [ORB_SLAM3_Grid_Mapping](https://github.com/MrPicklesGG/ORB_SLAM3_Grid_Mapping)
+  - [paper](https://github.com/abhineet123/ORB_SLAM2/blob/master/2d-grid-mapping.pdf)
 - Potential Recources
 - https://github.com/charbelias24/3dMapSLAM#24-octomap
 - https://github.com/OctoMap/octomap_mapping/tree/kinetic-devel
