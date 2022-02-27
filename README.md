@@ -15,7 +15,8 @@ Setup of sensors
 
 Translate ORB-SLAM output from point clouds to octree with Octomap for path planning
 - [ORB_SLAM3_Grid_Mapping](https://github.com/MrPicklesGG/ORB_SLAM3_Grid_Mapping)
-  - [paper](https://github.com/abhineet123/ORB_SLAM2/blob/master/2d-grid-mapping.pdf)
+  - [adapted from ORB-SLAM2 version repo](https://github.com/abhineet123/ORB_SLAM2)
+  - [paper of ORB-SLAM2 version](https://github.com/abhineet123/ORB_SLAM2/blob/master/2d-grid-mapping.pdf)
 - Potential Recources
 - https://github.com/charbelias24/3dMapSLAM#24-octomap
 - https://github.com/OctoMap/octomap_mapping/tree/kinetic-devel
