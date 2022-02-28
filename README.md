@@ -120,35 +120,7 @@ cmake --build .
 
 `pip3 install opencv-python==3.4.6.27`
 
-~~(if computer is capable of handling multi-thread run with something like `sudo make -j4 install`)~~
 
-~~This will take 20+ minutes so be ready to let it run~~
-
-~~git clone https://github.com/opencv/opencv~~
-
-~~git -C opencv checkout 3.4~~
-~~````
-cd opencv
-mkdir -p build && cd build
-cmake .. -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local
-sudo make install
-````~~
-
-~~make sure that when you `cmake` that you see both versions of python~~
-
-~~````
---   Python 2:
---     Interpreter:                 /usr/bin/python2.7 (ver 2.7.6)
---     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython2.7.so (ver 2.7.6)
---     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.8.2)
---     packages path:               lib/python2.7/dist-packages
---
---   Python 3:
---     Interpreter:                 /usr/bin/python3.4 (ver 3.4.3)
---     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython3.4m.so (ver 3.4.3)
---     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.8.2)
---     packages path:               lib/python3.4/dist-packages
-````~~
 
 ### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
 
@@ -351,14 +323,34 @@ https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
 
 https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
 
-````
-git clone https://github.com/opencv/opencv
-git -C opencv checkout 3.4
-cd opencv
+(if computer is capable of handling multi-thread run with something like `sudo make -j4 install`)
 
+This will take 20+ minutes so be ready to let it run
+
+git clone https://github.com/opencv/opencv
+
+git -C opencv checkout 3.4
+````
+cd opencv
 mkdir -p build && cd build
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .
+cmake .. -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local
 sudo make install
+````
+
+make sure that when you `cmake` that you see both versions of python~~
+
+````
+--   Python 2:
+--     Interpreter:                 /usr/bin/python2.7 (ver 2.7.6)
+--     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython2.7.so (ver 2.7.6)
+--     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.8.2)
+--     packages path:               lib/python2.7/dist-packages
+--
+--   Python 3:
+--     Interpreter:                 /usr/bin/python3.4 (ver 3.4.3)
+--     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython3.4m.so (ver 3.4.3)
+--     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.8.2)
+--     packages path:               lib/python3.4/dist-packages
 ````
 
 If having issues with `make -j4` freezing the machine, remove the parallel option and just run `make`
