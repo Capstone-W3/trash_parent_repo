@@ -132,6 +132,21 @@ mkdir -p build && cd build
 cmake .. -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local
 sudo make install
 ````
+make sure that when you `cmake` that you see both versions of python
+
+````
+--   Python 2:
+--     Interpreter:                 /usr/bin/python2.7 (ver 2.7.6)
+--     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython2.7.so (ver 2.7.6)
+--     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.8.2)
+--     packages path:               lib/python2.7/dist-packages
+--
+--   Python 3:
+--     Interpreter:                 /usr/bin/python3.4 (ver 3.4.3)
+--     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython3.4m.so (ver 3.4.3)
+--     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.8.2)
+--     packages path:               lib/python3.4/dist-packages
+````
 
 ### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
 
