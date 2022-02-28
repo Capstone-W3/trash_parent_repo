@@ -32,6 +32,9 @@ YOLO for our application and SLAM
 - Run YOLO with UAVVaste dataset ([git-repo](https://github.com/UAVVaste/UAVVaste))
   - This could be super easy but unsure because they almost certainly used a different version of YOLO
   - [How to train to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
+  - 
+  - [how-to-improve-object-detection](https://github.com/AlexeyAB/darknet#how-to-improve-object-detection)
+  - [Convert COCO style annotations to YOLO format](https://github.com/qwirky-yuzu/COCO-to-YOLO) for images from [UAVVaste](https://github.com/UAVVaste/UAVVaste)
 
 
 
