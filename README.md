@@ -56,6 +56,47 @@ OR if git version is 2.23 or greater
 
 `git clone --recurse-submodules --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
+#### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
+
+## General requirements
+
+### pip3
+
+`sudo apt-get install python3-pip`
+
+DO NOT run the suggested update command, pip > 21.0 does not support python3.5 and will break the entire system. This happened to me and took a long time to fix because as of Jan 2022 it seems to be impossible to upgrade python versions on Ubuntu 16.04 ([issue](https://github.com/deadsnakes/issues/issues/195)). 
+
+To update versions without breaking everything:
+
+`pip install -U "pip<21.0" setuptools`
+
+**NOTE:** If you have already broken it like me, you have to install pip from another source, otherwise don't run this command
+
+````
+curl -sSL https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
+python3 get-pip.py "pip < 21.0"
+````
+
+### ROS
+
+Install ros-kinetic
+
+`sudo apt-get install ros-kinetic-desktop-full`
+
+`sudo apt-get install ros-kinetic-catkin python-catkin-tools`
+
+`sudo apt-get install ros-kinetic-catkin python-controller-manager`
+
+`sudo apt-get install ros-kinetic-pid`
+
+**DO NOT** run the suggested command from ros that adds `source /opt/ros/kinetic/setup.bash` to your `~/.bashrc`. This will cause the `ros` version of any package to be the system defaults (opencv will be sourced from the ros version not the one you install)
+
+To check whether this has been done on pre-installed ros, open `~/.bashrc` (`code ~/.bashrc` for VSCode) and remove this line if already there.
+
+For any terminal shell that you wish to run ros commands from you must now run
+
+`source /opt/ros/kinetic/setup.bash` or for this specific project's catkin workspace `source ~/trash_parent_repo/catkin_ws/devel/setup.bash`
+
 
 # ORB-SLAM3 and its ros wrapper
 
@@ -118,8 +159,11 @@ cmake --build .
 
 #### OpenCV
 
+If OpenCV is only needed for the dependencies from other repos you can just install through `pip3`
+
 `pip3 install opencv-python==3.4.6.27`
 
+If needing to perform camera callibrations or other things specifically within OpenCV, see other OpenCV section towards the bottom of this repo (should link to it)
 
 
 ### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
@@ -173,11 +217,19 @@ cd ../..
 catkin build
 ````
 
-Follow steps from [here](https://github.com/thien94/orb_slam3_ros_wrapper#2-orb_slam3_ros_wrapper-this-package)
+The steps described [here](https://github.com/thien94/orb_slam3_ros_wrapper#2-orb_slam3_ros_wrapper-this-package) for setting directories of ORB_SLAM and Vocabulary have already been done for the default location and structure of this repo, `$HOME/trash_parent_repo`
 
-And has dependency 
+Install dependency for their publishers 
 
 `sudo apt-get install ros-kinetic-hector-trajectory-server`
+
+#### To run with gridmap
+
+`roslaunch orb_slam3_ros_wrapper orb_slam3_mono_gridmap.launch`
+
+and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/)
+
+`rosbag play V1_01_easy.bag`
 
 
 ## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.3))
@@ -192,29 +244,17 @@ https://link.springer.com/article/10.1007/s00521-021-06764-3
 
 #### UAVVaste
 
-requires pip3
-
-`sudo apt-get install python3-pip`
-
-DO NOT run the suggested update command, pip > 21.0 does not support python3.5 and will break the entire system. This happened to me and took a long time to fix because as of Jan 2022 it seems to be impossible to upgrade python versions on Ubuntu 16.04 ([issue](https://github.com/deadsnakes/issues/issues/195)). 
-
-To update versions without breaking everything, `pip install -U "pip<21.0" setuptools`
-
-If you have already broken it like me, you have to install pip from another source
-
 ````
-curl -sSL https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
-python3 get-pip.py "pip < 21.0"
-````
-
-Then
-
-````
-git clone https://github.com/UAVVaste/UAVVaste
+git clone https://github.com/Capstone-W3/UAVVaste
+cd UAVVaste
 pip3 install -r requirements.txt
 python3 main.py
 ````
 This script is written using f-strings (which are not supported in python3.5) so lines 15, 18, and 22 need to be changed to not use this format.
+
+To translate from their COCO-like format to YOLO format 
+
+`python3 coco_to_yolo.py`
 
 
 &nbsp; 
@@ -492,13 +532,6 @@ roslaunch orb_slam2_ros raspicam_mono_wide.launch
 
 ### For all of ORB-SLAM
 
-`sudo apt-get install ros-kinetic-desktop-full`
-
-`sudo apt-get install ros-kinetic-catkin python-catkin-tools`
-
-`sudo apt-get install ros-kinetic-catkin python-controller-manager`
-
-`sudo apt-get install ros-kinetic-pid`
 
 ### For only robot example
 
