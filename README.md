@@ -66,7 +66,7 @@ OR if git version is 2.23 or greater
 
 DO NOT run the suggested update command, pip > 21.0 does not support python3.5 and will break the entire system. This happened to me and took a long time to fix because as of Jan 2022 it seems to be impossible to upgrade python versions on Ubuntu 16.04 ([issue](https://github.com/deadsnakes/issues/issues/195)). 
 
-To update versions without breaking everything:
+To update versions without breaking everything: (actually I think it should be `pip3 install...`)
 
 `pip install -U "pip<21.0" setuptools`
 
