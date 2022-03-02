@@ -112,7 +112,7 @@ Requires updated version of CMake, but many way of doing this will break a pre-i
 
 ````
 cd $HOME
-wget https://cmake.org/files/v3.22/cmake-3.22.2-Linux-x86_64.tar.gz
+wget https://cmake.org/files/v3.22/cmake-3.22.2-linux-x86_64.tar.gz
 tar xzf cmake-3.22.2-Linux-x86_64.tar.gz
 rm -rf cmake-3.22.2-Linux-x86_64.tar.gz
 cd cmake-3.22.3-Linux-x86_64
