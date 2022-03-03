@@ -36,7 +36,7 @@ YOLO for our application and SLAM
   - [how-to-improve-object-detection](https://github.com/AlexeyAB/darknet#how-to-improve-object-detection)
   - [Convert COCO style annotations to YOLO format](https://github.com/qwirky-yuzu/COCO-to-YOLO) for images from [UAVVaste](https://github.com/UAVVaste/UAVVaste)
 
-**TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP
+**TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
 
 - https://colab.research.google.com/drive/1DRbdWh7pWrKC28hN1RmgkOhKlOxhPm9X#scrollTo=NjKzw2TvZrOQ
 - https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/
