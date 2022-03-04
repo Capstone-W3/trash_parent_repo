@@ -6,6 +6,10 @@ http://tacodataset.org/
 
 https://github.com/IeiuniumLux/Visual-SLAM
 
+https://answers.ros.org/question/355158/roslaunch-dies-with-exit-code-11-after-it-stops-receiving-topic-from-bag-file/
+
+https://answers.ros.org/question/188823/segmentation-fault/
+
 Setup of sensors
 
 - All 3 of our cameras need callibration (drone front and bottom and turtlebot)
