@@ -1,7 +1,9 @@
-# TODO
-
 ### For Jared and Katie
 - [Instructions](#how-to-train-yolo)
+
+
+# TODO
+
 
 https://gist.github.com/rethink-imcmahon/77a1a4d5506258f3dc1f?permalink_comment_id=3577587#gistcomment-3577587
 
