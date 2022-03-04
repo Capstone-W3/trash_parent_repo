@@ -254,6 +254,8 @@ and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/i
 
 ### How to train YOLO
 
+Login Credentials for our Google and Roboflow accounts can be found [here](https://github.com/Capstone-W3/Trash-Access-Tokens)
+
 Using Roboflow for image storage and annotations. Starting with images from [UAVVaste fork](https://github.com/Capstone-W3/UAVVaste) (which was forked from [original](https://github.com/UAVVaste/UAVVaste), and uploading to Roboflow project [TRASH+UAVVaste](https://app.roboflow.com/trash-northeastern/trash-uavvaste). More images can be uploaded and added for our specific use. A Google-Colab Jupyter Notebook ([original](https://colab.research.google.com/drive/1PWOwg038EOGNddf6SXDG5AsC8PIcAe-G#scrollTo=LGPDEjfAALrQ) and [ours](https://colab.research.google.com/drive/1DRbdWh7pWrKC28hN1RmgkOhKlOxhPm9X#scrollTo=NjKzw2TvZrOQ)) is being used for the actual training of the model to use free GPUs for training that doesn't take days.
 
 For deeper information check out the actual [Darknet](https://github.com/AlexeyAB/darknet) repo and its instructions on how to [train to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
