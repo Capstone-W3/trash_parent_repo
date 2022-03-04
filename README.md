@@ -271,7 +271,9 @@ Then should be good to run each cell in the notebook to train, this will take a 
 
 After this finishes there should files `custom-yolov4-tiny-detector_best.weights`, `custom-yolov4-tiny-detector_final.weights`, and `custom-yolov4-tiny-detector_last.weights`; save the `_best.weights` to be used when running Darkent with ROS.
 
+
 ### How to use trained YOLO model in ROS
+
 ````
 
 cd catkin_workspace/src
