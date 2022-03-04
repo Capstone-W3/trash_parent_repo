@@ -243,9 +243,23 @@ and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/i
 `rosbag play V1_01_easy.bag`
 
 
-## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.3))
+## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
+````
 
+cd catkin_workspace/src
+git checkout 1.1.5
+catkin build
+````
+
+Getting what I have found to be a segmentation fault as soon as first image is read in [here](https://answers.ros.org/question/300753/how-to-read-ros-log-file/) and [here](https://github.com/leggedrobotics/darknet_ros/issues/205)
+
+````
+[darknet_ros-1] process has died [pid 2876, exit code -11, cmd /home/mllax8/trash_parent_repo/catkin_ws/devel/lib/darknet_ros/darknet_ros camera/rgb/image_raw:=/ardrone/front/image_raw __name:=darknet_ros __log:=/home/mllax8/.ros/log/33c5db96-9b65-11ec-b94b-000c29e37f7d/darknet_ros-1.log].
+log file: /home/mllax8/.ros/log/33c5db96-9b65-11ec-b94b-000c29e37f7d/darknet_ros-1*.log
+````
+
+https://github.com/leggedrobotics/darknet_ros/issues/93#issuecomment-520524269
 
 
 #### YOLO with SLAM
