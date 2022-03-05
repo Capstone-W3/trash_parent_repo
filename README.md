@@ -20,7 +20,9 @@ https://answers.ros.org/question/355158/roslaunch-dies-with-exit-code-11-after-i
 https://answers.ros.org/question/188823/segmentation-fault/
 
 Setup of sensors
-
+- Install Realsense2 ros packages
+  - `sudo apt-get install ros-kinetic-realsense2-camera`
+  - This doesn't work out of box, follow instructions for adding udev rules for camera [here](https://github.com/IntelRealSense/realsense-ros/issues/1408#issuecomment-698128999)
 - All 3 of our cameras need callibration (drone front and bottom and turtlebot)
   - How to callibrate cameras [using OpenCV](https://docs.opencv.org/3.4/d6/d55/tutorial_table_of_content_calib3d.html), which we already have in the project
   - Need an orbslam camera yaml file for front facing in [this form](https://github.com/Capstone-W3/ORB_SLAM3/blob/v0.3-beta/Examples/Monocular-Inertial/EuRoC.yaml)
