@@ -21,3 +21,6 @@
 	path = catkin_ws/src/orb_slam3_ros_wrapper
 	url = https://github.com/Capstone-W3/orb_slam3_ros_wrapper
 	branch = master
+[submodule "catkin_ws/src/ardrone_autonomy"]
+	path = catkin_ws/src/ardrone_autonomy
+	url = ./catkin_ws/src/ardrone_autonomy/
