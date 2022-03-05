@@ -139,8 +139,8 @@ cd cmake-3.22.2
 ./configure
 make
 sudo make install
-echo 'export PATH=$HOME/cmake-install/bin:$PATH' >> ~/.bashrc
-echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bashrc
+echo 'export PATH=$HOME/cmake-3.22.2/bin:$PATH' >> ~/.bashrc
+echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-3.22.2:$CMAKE_PREFIX_PATH' >> ~/.bashrc
 ````
 
 Check that everything worked using `cmake --version`
