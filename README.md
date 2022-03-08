@@ -19,6 +19,8 @@ https://answers.ros.org/question/355158/roslaunch-dies-with-exit-code-11-after-i
 
 https://answers.ros.org/question/188823/segmentation-fault/
 
+https://github.com/leggedrobotics/darknet_ros/issues/345
+
 Setup of sensors
 - Install Realsense2 ros packages
   - `sudo apt-get install ros-kinetic-realsense2-camera`
