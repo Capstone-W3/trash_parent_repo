@@ -1,6 +1,8 @@
 ### For Jared and Katie
 - [Instructions](#how-to-train-yolo)
 
+# Google drive with rosbags and training data
+https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef?usp=sharing
 
 # TODO
 
@@ -20,6 +22,8 @@ https://answers.ros.org/question/355158/roslaunch-dies-with-exit-code-11-after-i
 https://answers.ros.org/question/188823/segmentation-fault/
 
 https://github.com/leggedrobotics/darknet_ros/issues/345
+
+https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef?usp=sharing
 
 Setup of sensors
 - Install Realsense2 ros packages
