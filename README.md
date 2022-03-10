@@ -220,7 +220,7 @@ We are using `v0.3` due to limitations from the ros wrapper but otherwise we cou
 ~~git -C ORB_SLAM3 checkout v0.3~~
 
 ````
-cd ORB_SLAM3
+cd ~/trash_parent_repo/ORB_SLAM3
 git checkout trash
 
 chmod +x build.sh
