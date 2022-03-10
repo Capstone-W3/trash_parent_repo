@@ -1,0 +1,74 @@
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/teleop_twist.h:28[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/teleop_twist.cpp:26[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/video.h:28[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/video.cpp:25[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:25[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_driver.h:41[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_driver.cpp:30[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/ardrone_tool_configuration.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:56[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:25[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K

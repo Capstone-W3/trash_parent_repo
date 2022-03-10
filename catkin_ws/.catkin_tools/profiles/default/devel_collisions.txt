@@ -1,0 +1,1 @@
+/home/trash/trash_parent_repo/catkin_ws/devel/./cmake.lock 255

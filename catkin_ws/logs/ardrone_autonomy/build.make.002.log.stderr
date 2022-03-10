@@ -1,0 +1,1484 @@
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+./configure: 3152: test: linux: unexpected operator
+[01m[Klibavfilter/defaults.c:[m[K In function ‘[01m[Kset_common_formats[m[K’:
+[01m[Klibavfilter/defaults.c:207:75:[m[K [01;35m[Kwarning: [m[Kpointer of type ‘[01m[Kvoid *[m[K’ used in arithmetic [-Wpointer-arith]
+                                  (AVFilterFormats**)((void*)ctx->inputs[i]+offout));
+[01;32m[K                                                                           ^[m[K
+[01m[Klibavfilter/defaults.c:212:76:[m[K [01;35m[Kwarning: [m[Kpointer of type ‘[01m[Kvoid *[m[K’ used in arithmetic [-Wpointer-arith]
+                                  (AVFilterFormats**)((void*)ctx->outputs[i]+offin));
+[01;32m[K                                                                            ^[m[K
+[01m[Klibavformat/avio.c:[m[K In function ‘[01m[Kffurl_write[m[K’:
+[01m[Klibavformat/avio.c:313:38:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kretry_transfer_wrapper[m[K’ discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     return retry_transfer_wrapper(h, buf, size, size, (void*)h->prot->url_write);
+[01;32m[K                                      ^[m[K
+[01m[Klibavformat/avio.c:261:19:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kunsigned char *[m[K’ but argument is of type ‘[01m[Kconst unsigned char *[m[K’
+ static inline int retry_transfer_wrapper(URLContext *h, unsigned char *buf, int size, int size_min,
+[01;32m[K                   ^[m[K
+[01m[Klibavcodec/bitstream_filter.c:[m[K In function ‘[01m[Kav_bitstream_filter_filter[m[K’:
+[01m[Klibavcodec/bitstream_filter.c:62:15:[m[K [01;35m[Kwarning: [m[Kcast discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wcast-qual]
+     *poutbuf= (uint8_t *) buf;
+[01;32m[K               ^[m[K
+[01m[Klibavcodec/dsputil.c:[m[K In function ‘[01m[Kdsputil_init[m[K’:
+[01m[Klibavcodec/dsputil.c:3228:43:[m[K [01;35m[Kwarning: [m[Kiteration 16u invokes undefined behavior [-Waggressive-loop-optimizations]
+         if(!c->avg_2tap_qpel_pixels_tab[0][i])
+[01;32m[K                                           ^[m[K
+[01m[Klibavcodec/dsputil.c:3225:5:[m[K [01;36m[Knote: [m[Kcontaining loop
+     for(i=0; i<64; i++){
+[01;32m[K     ^[m[K
+[01m[Klibavcodec/h264.c:[m[K In function ‘[01m[Kdecode_slice_header[m[K’:
+[01m[Klibavcodec/h264.c:2724:35:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kuint8_t ** {aka unsigned char **}[m[K’ to ‘[01m[Kconst uint8_t ** {aka const unsigned char **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+                                   (const uint8_t**)prev->data, prev->linesize,
+[01;32m[K                                   ^[m[K
+[01m[Klibavcodec/h264.c:[m[K In function ‘[01m[Kfill_filter_caches[m[K’:
+[01m[Klibavcodec/h264.c:3156:38:[m[K [01;35m[Kwarning: [m[Kinitialization from incompatible pointer type [-Wincompatible-pointer-types]
+                 int (*ref2frm)[64] = h->ref2frm[ h->slice_num&(MAX_SLICES-1) ][0] + (MB_MBAFF ? 20 : 2);
+[01;32m[K                                      ^[m[K
+[01m[Klibavcodec/h264.c:3233:38:[m[K [01;35m[Kwarning: [m[Kinitialization from incompatible pointer type [-Wincompatible-pointer-types]
+                 int (*ref2frm)[64] = h->ref2frm[ h->slice_table[top_xy]&(MAX_SLICES-1) ][0] + (MB_MBAFF ? 20 : 2);
+[01;32m[K                                      ^[m[K
+[01m[Klibavcodec/h264.c:3248:42:[m[K [01;35m[Kwarning: [m[Kinitialization from incompatible pointer type [-Wincompatible-pointer-types]
+                     int (*ref2frm)[64] = h->ref2frm[ h->slice_table[left_xy[0]]&(MAX_SLICES-1) ][0] + (MB_MBAFF ? 20 : 2);
+[01;32m[K                                          ^[m[K
+[01m[Klibavcodec/imgconvert.c:[m[K In function ‘[01m[Kav_picture_copy[m[K’:
+[01m[Klibavcodec/imgconvert.c:669:45:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Kav_image_copy[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     av_image_copy(dst->data, dst->linesize, src->data,
+[01;32m[K                                             ^[m[K
+In file included from [01m[Klibavcodec/imgconvert.c:39:0[m[K:
+[01m[K./libavutil/imgutils.h:112:6:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint8_t ** {aka const unsigned char **}[m[K’ but argument is of type ‘[01m[Kuint8_t * const* {aka unsigned char * const*}[m[K’
+ void av_image_copy(uint8_t *dst_data[4], int dst_linesizes[4],
+[01;32m[K      ^[m[K
+[01m[Klibavcodec/ituh263dec.c:[m[K In function ‘[01m[Kh263_decode_block[m[K’:
+[01m[Klibavcodec/ituh263dec.c:444:15:[m[K [01;35m[Kwarning: [m[K‘[01m[Klevel[m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     int code, level, i, j, last, run;
+[01;32m[K               ^[m[K
+[01m[Klibavcodec/mpeg4videoenc.c:[m[K In function ‘[01m[Kmpeg4_encode_block[m[K’:
+[01m[Klibavcodec/mpeg4videoenc.c:302:20:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Krl[m[K’ set but not used [-Wunused-but-set-variable]
+     const RLTable *rl;
+[01;32m[K                    ^[m[K
+In file included from [01m[K./libavutil/avutil.h:125:0[m[K,
+                 from [01m[K./libavutil/samplefmt.h:22[m[K,
+                 from [01m[Klibavcodec/avcodec.h:30[m[K,
+                 from [01m[Klibavcodec/dsputil.h:34[m[K,
+                 from [01m[Klibavcodec/mpegvideo.h:31[m[K,
+                 from [01m[Klibavcodec/mpeg4videoenc.c:23[m[K:
+[01m[Klibavcodec/mpeg4videoenc.c:[m[K In function ‘[01m[Kmpeg4_encode_gop_header[m[K’:
+[01m[K./libavutil/common.h:51:21:[m[K [01;35m[Kwarning: [m[Kstatement with no effect [-Wunused-value]
+ #define FFUMOD(a,b) ((a)-(b)*FFUDIV(a,b))
+[01;32m[K                     ^[m[K
+[01m[Klibavcodec/mpeg4videoenc.c:901:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KFFUMOD[m[K’
+     minutes= FFUDIV(seconds, 60); FFUMOD(seconds, 60);
+[01;32m[K                                   ^[m[K
+[01m[K./libavutil/common.h:51:21:[m[K [01;35m[Kwarning: [m[Kstatement with no effect [-Wunused-value]
+ #define FFUMOD(a,b) ((a)-(b)*FFUDIV(a,b))
+[01;32m[K                     ^[m[K
+[01m[Klibavcodec/mpeg4videoenc.c:902:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KFFUMOD[m[K’
+     hours  = FFUDIV(minutes, 60); FFUMOD(minutes, 60);
+[01;32m[K                                   ^[m[K
+[01m[Klibavcodec/mpeg4videodec.c:[m[K In function ‘[01m[Kmpeg4_decode_partitioned_mb[m[K’:
+[01m[Klibavcodec/mpeg4videodec.c:1076:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdc_pred_dir[m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         mpeg4_pred_ac(s, block, n, dc_pred_dir);
+[01;32m[K         ^[m[K
+[01m[Klibavcodec/mpeg4videodec.c:847:9:[m[K [01;36m[Knote: [m[K‘[01m[Kdc_pred_dir[m[K’ was declared here
+     int dc_pred_dir;
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est.c:[m[K In function ‘[01m[Kinterlaced_search[m[K’:
+[01m[Klibavcodec/motion_est_template.c:1228:49:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[4][1][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_MEDIAN[0]>>shift, P_MEDIAN[1]>>shift)
+[01;32m[K                                                 ^[m[K
+[01m[Klibavcodec/motion_est.c:752:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[4][1][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1228:29:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[4][0][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_MEDIAN[0]>>shift, P_MEDIAN[1]>>shift)
+[01;32m[K                             ^[m[K
+[01m[Klibavcodec/motion_est.c:752:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[4][0][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1231:53:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[3][1][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOPRIGHT[0]>>shift, P_TOPRIGHT[1]>>shift)
+[01;32m[K                                                     ^[m[K
+[01m[Klibavcodec/motion_est.c:752:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[3][1][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1231:31:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[3][0][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOPRIGHT[0]>>shift, P_TOPRIGHT[1]>>shift)
+[01;32m[K                               ^[m[K
+[01m[Klibavcodec/motion_est.c:752:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[3][0][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1230:43:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[2][1][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOP[0]>>shift, P_TOP[1]>>shift)
+[01;32m[K                                           ^[m[K
+[01m[Klibavcodec/motion_est.c:752:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[2][1][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1230:26:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[2][0][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOP[0]>>shift, P_TOP[1]>>shift)
+[01;32m[K                          ^[m[K
+[01m[Klibavcodec/motion_est.c:752:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[2][0][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est.c:[m[K In function ‘[01m[Kh263_mv4_search[m[K’:
+[01m[Klibavcodec/motion_est_template.c:1168:49:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[4][1][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_MEDIAN[0]>>shift, P_MEDIAN[1]>>shift)
+[01;32m[K                                                 ^[m[K
+[01m[Klibavcodec/motion_est.c:602:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[4][1][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1168:29:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[4][0][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_MEDIAN[0]>>shift, P_MEDIAN[1]>>shift)
+[01;32m[K                             ^[m[K
+[01m[Klibavcodec/motion_est.c:602:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[4][0][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1171:53:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[3][1][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOPRIGHT[0]>>shift, P_TOPRIGHT[1]>>shift)
+[01;32m[K                                                     ^[m[K
+[01m[Klibavcodec/motion_est.c:602:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[3][1][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1171:31:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[3][0][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOPRIGHT[0]>>shift, P_TOPRIGHT[1]>>shift)
+[01;32m[K                               ^[m[K
+[01m[Klibavcodec/motion_est.c:602:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[3][0][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1170:43:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[2][1][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOP[0]>>shift, P_TOP[1]>>shift)
+[01;32m[K                                           ^[m[K
+[01m[Klibavcodec/motion_est.c:602:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[2][1][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+In file included from [01m[Klibavcodec/motion_est.c:289:0[m[K:
+[01m[Klibavcodec/motion_est_template.c:1170:26:[m[K [01;35m[Kwarning: [m[K‘[01m[KP[2][0][m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         CHECK_MV(P_TOP[0]>>shift, P_TOP[1]>>shift)
+[01;32m[K                          ^[m[K
+[01m[Klibavcodec/motion_est.c:602:9:[m[K [01;36m[Knote: [m[K‘[01m[KP[2][0][m[K’ was declared here
+     int P[10][2];
+[01;32m[K         ^[m[K
+[01m[Klibavcodec/options.c:[m[K In function ‘[01m[Kavcodec_get_context_defaults3[m[K’:
+[01m[Klibavcodec/options.c:521:37:[m[K [01;35m[Kwarning: [m[Kassignment discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+             *(AVClass**)s->priv_data= codec->priv_class;
+[01;32m[K                                     ^[m[K
+[01m[Klibavcodec/parser.c:[m[K In function ‘[01m[Kav_parser_parse2[m[K’:
+[01m[Klibavcodec/parser.c:149:47:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kuint8_t ** {aka unsigned char **}[m[K’ to ‘[01m[Kconst uint8_t ** {aka const unsigned char **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+     index = s->parser->parser_parse(s, avctx, (const uint8_t **)poutbuf, poutbuf_size, buf, buf_size);
+[01;32m[K                                               ^[m[K
+[01m[Klibavcodec/parser.c:[m[K In function ‘[01m[Kav_parser_change[m[K’:
+[01m[Klibavcodec/parser.c:185:15:[m[K [01;35m[Kwarning: [m[Kcast discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wcast-qual]
+     *poutbuf= (uint8_t *) buf;
+[01;32m[K               ^[m[K
+[01m[Klibavcodec/rawdec.c:[m[K In function ‘[01m[Kraw_decode[m[K’:
+[01m[Klibavcodec/rawdec.c:181:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kavpicture_fill[m[K’ discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     avpicture_fill(picture, buf, avctx->pix_fmt, avctx->width, avctx->height);
+[01;32m[K                             ^[m[K
+In file included from [01m[Klibavcodec/rawdec.c:27:0[m[K:
+[01m[Klibavcodec/avcodec.h:3362:5:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ int avpicture_fill(AVPicture *picture, uint8_t *ptr,
+[01;32m[K     ^[m[K
+[01m[Klibavcodec/rawdec.c:185:23:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         frame->data[1]= context->palette;
+[01;32m[K                       ^[m[K
+[01m[Klibavcodec/resample.c:[m[K In function ‘[01m[Ksurround_to_stereo[m[K’:
+[01m[Klibavcodec/resample.c:124:27:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klfe[m[K’ set but not used [-Wunused-but-set-variable]
+         int fl,fr,c,rl,rr,lfe;
+[01;32m[K                           ^[m[K
+[01m[Klibavcodec/utils.c:[m[K In function ‘[01m[Kavcodec_open[m[K’:
+[01m[Klibavcodec/utils.c:514:41:[m[K [01;35m[Kwarning: [m[Kassignment discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+             *(AVClass**)avctx->priv_data= codec->priv_class;
+[01;32m[K                                         ^[m[K
+[01m[Klibavcodec/utils.c:[m[K In function ‘[01m[Kavcodec_encode_audio[m[K’:
+[01m[Klibavcodec/utils.c:654:62:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Kavctx->codec->encode[m[K’ discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         int ret = avctx->codec->encode(avctx, buf, buf_size, samples);
+[01;32m[K                                                              ^[m[K
+[01m[Klibavcodec/utils.c:654:62:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kvoid *[m[K’ but argument is of type ‘[01m[Kconst short int *[m[K’
+[01m[Klibavcodec/utils.c:[m[K In function ‘[01m[Kavcodec_encode_video[m[K’:
+[01m[Klibavcodec/utils.c:671:62:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Kavctx->codec->encode[m[K’ discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         int ret = avctx->codec->encode(avctx, buf, buf_size, pict);
+[01;32m[K                                                              ^[m[K
+[01m[Klibavcodec/utils.c:671:62:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kvoid *[m[K’ but argument is of type ‘[01m[Kconst AVFrame * {aka const struct AVFrame *}[m[K’
+[01m[Klibavcodec/utils.c:[m[K In function ‘[01m[Kavcodec_encode_subtitle[m[K’:
+[01m[Klibavcodec/utils.c:689:54:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Kavctx->codec->encode[m[K’ discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     ret = avctx->codec->encode(avctx, buf, buf_size, sub);
+[01;32m[K                                                      ^[m[K
+[01m[Klibavcodec/utils.c:689:54:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kvoid *[m[K’ but argument is of type ‘[01m[Kconst AVSubtitle * {aka const struct AVSubtitle *}[m[K’
+[01m[Klibavcodec/x86/dsputil_mmx.c:[m[K In function ‘[01m[Kdsputil_init_mmx[m[K’:
+[01m[Klibavcodec/x86/dsputil_mmx.c:2340:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbit_depth[m[K’ [-Wunused-variable]
+     const int bit_depth = avctx->bits_per_raw_sample;
+[01;32m[K               ^[m[K
+[01m[Klibavcodec/x86/h264_intrapred_init.c:[m[K In function ‘[01m[Kff_h264_pred_init_x86[m[K’:
+[01m[Klibavcodec/x86/h264_intrapred_init.c:125:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmm_flags[m[K’ [-Wunused-variable]
+     int mm_flags = av_get_cpu_flags();
+[01;32m[K         ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb48LEToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1477:25:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                         ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1477:30:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                              ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb48LEToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1484:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                          ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:32:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:38:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                      ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:44:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb48LEToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1491:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                               ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:37:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                     ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:43:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                           ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:49:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                                 ^[m[K
+[01m[Klibswscale/swscale.c:1494:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, LE, PIX_FMT_RGB48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb48BEToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1477:25:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                         ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1477:30:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                              ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb48BEToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1484:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                          ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:32:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:38:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                      ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:44:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb48BEToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1491:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                               ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:37:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                     ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:43:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                           ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:49:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                                 ^[m[K
+[01m[Klibswscale/swscale.c:1495:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(rgb, BE, PIX_FMT_RGB48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr48LEToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1477:25:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                         ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1477:30:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                              ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr48LEToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1484:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                          ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:32:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:38:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                      ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:44:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr48LEToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1491:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                               ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:37:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                     ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:43:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                           ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:49:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                                 ^[m[K
+[01m[Klibswscale/swscale.c:1496:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, LE, PIX_FMT_BGR48LE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr48BEToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1477:25:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                         ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1477:30:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToY_c_template(dst, src, width, origin); \
+[01;32m[K                              ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1422:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToY_c_template(int16_t *dst, const uint16_t *src, int width,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr48BEToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1484:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                          ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:32:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:38:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                      ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1484:44:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1436:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr48BEToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1491:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                               ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:37:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                     ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:43:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                           ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1491:49:[m[K [01;35m[Kwarning: [m[Kpassing argument 4 of ‘[01m[Krgb48ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb48ToUV_half_c_template(dstU, dstV, src1, src2, width, origin); \
+[01;32m[K                                                 ^[m[K
+[01m[Klibswscale/swscale.c:1497:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb48funcs[m[K’
+ rgb48funcs(bgr, BE, PIX_FMT_BGR48BE);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1453:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst uint16_t * {aka const short unsigned int *}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * {aka const unsigned char *}[m[K’
+ rgb48ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr32ToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1609:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32,    bgr32,  16, 0,  0, 0, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr32ToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1609:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32,    bgr32,  16, 0,  0, 0, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1609:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32,    bgr32,  16, 0,  0, 0, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr32ToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1609:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32,    bgr32,  16, 0,  0, 0, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1609:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32,    bgr32,  16, 0,  0, 0, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr321ToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1610:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32_1,  bgr321, 16, 0,  0, 8, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr321ToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1610:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32_1,  bgr321, 16, 0,  0, 8, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1610:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32_1,  bgr321, 16, 0,  0, 8, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr321ToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1610:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32_1,  bgr321, 16, 0,  0, 8, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1610:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR32_1,  bgr321, 16, 0,  0, 8, 0xFF0000, 0xFF00,   0x00FF,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb32ToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1611:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32,    rgb32,   0, 0, 16, 0,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb32ToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1611:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32,    rgb32,   0, 0, 16, 0,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1611:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32,    rgb32,   0, 0, 16, 0,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb32ToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1611:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32,    rgb32,   0, 0, 16, 0,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1611:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32,    rgb32,   0, 0, 16, 0,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb321ToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1612:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32_1,  rgb321,  0, 0, 16, 8,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb321ToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1612:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32_1,  rgb321,  0, 0, 16, 8,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1612:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32_1,  rgb321,  0, 0, 16, 8,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb321ToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1612:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32_1,  rgb321,  0, 0, 16, 8,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1612:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB32_1,  rgb321,  0, 0, 16, 8,   0x00FF, 0xFF00, 0xFF0000,  8, 0,  8, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr16leToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1613:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565LE, bgr16le, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr16leToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1613:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565LE, bgr16le, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1613:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565LE, bgr16le, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr16leToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1613:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565LE, bgr16le, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1613:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565LE, bgr16le, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr15leToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1614:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555LE, bgr15le, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr15leToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1614:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555LE, bgr15le, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1614:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555LE, bgr15le, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr15leToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1614:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555LE, bgr15le, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1614:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555LE, bgr15le, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb16leToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1615:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565LE, rgb16le, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb16leToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1615:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565LE, rgb16le, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1615:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565LE, rgb16le, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb16leToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1615:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565LE, rgb16le, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1615:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565LE, rgb16le, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb15leToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1616:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555LE, rgb15le, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb15leToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1616:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555LE, rgb15le, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1616:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555LE, rgb15le, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb15leToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1616:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555LE, rgb15le, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1616:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555LE, rgb15le, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr16beToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1617:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565BE, bgr16be, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr16beToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1617:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565BE, bgr16be, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1617:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565BE, bgr16be, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr16beToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1617:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565BE, bgr16be, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1617:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR565BE, bgr16be, 0, 0,  0, 0,   0x001F, 0x07E0,   0xF800, 11, 5,  0, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr15beToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1618:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555BE, bgr15be, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr15beToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1618:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555BE, bgr15be, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1618:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555BE, bgr15be, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kbgr15beToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1618:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555BE, bgr15be, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1618:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_BGR555BE, bgr15be, 0, 0,  0, 0,   0x001F, 0x03E0,   0x7C00, 10, 5,  0, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb16beToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1619:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565BE, rgb16be, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb16beToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1619:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565BE, rgb16be, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1619:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565BE, rgb16be, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb16beToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1619:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565BE, rgb16be, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1619:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB565BE, rgb16be, 0, 0,  0, 0,   0xF800, 0x07E0,   0x001F,  0, 5, 11, RGB2YUV_SHIFT+8);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb15beToY_c[m[K’:
+[01m[Klibswscale/swscale.c:1589:28:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToY_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToY_c_template(dst, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                            ^[m[K
+[01m[Klibswscale/swscale.c:1620:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555BE, rgb15be, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1504:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToY_c_template(int16_t *dst, const uint8_t *src,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb15beToUV_c[m[K’:
+[01m[Klibswscale/swscale.c:1597:29:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                             ^[m[K
+[01m[Klibswscale/swscale.c:1620:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555BE, rgb15be, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1597:35:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                   ^[m[K
+[01m[Klibswscale/swscale.c:1620:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555BE, rgb15be, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1525:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Krgb15beToUV_half_c[m[K’:
+[01m[Klibswscale/swscale.c:1605:34:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                  ^[m[K
+[01m[Klibswscale/swscale.c:1620:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555BE, rgb15be, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1605:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Krgb16_32ToUV_half_c_template[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rgb16_32ToUV_half_c_template(dstU, dstV, src, width, fmt, shr, shg, shb, shp, \
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:1620:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Krgb16_32_wrapper[m[K’
+ rgb16_32_wrapper(PIX_FMT_RGB555BE, rgb15be, 0, 0,  0, 0,   0x7C00, 0x03E0,   0x001F,  0, 5, 10, RGB2YUV_SHIFT+7);
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:1549:1:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint16_t * {aka short int *}[m[K’ but argument is of type ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’
+ rgb16_32ToUV_half_c_template(int16_t *dstU, int16_t *dstV,
+[01;32m[K ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Kfind_c_packed_planar_out_funcs[m[K’:
+[01m[Klibswscale/swscale.c:2106:23:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         *yuv2yuvX     = isBE(dstFormat) ? yuv2yuvX16BE_c  : yuv2yuvX16LE_c;
+[01;32m[K                       ^[m[K
+[01m[Klibswscale/swscale.c:2109:23:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+             *yuv2yuvX = isBE(dstFormat) ? yuv2yuvX9BE_c :  yuv2yuvX9LE_c;
+[01;32m[K                       ^[m[K
+[01m[Klibswscale/swscale.c:2111:23:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+             *yuv2yuvX = isBE(dstFormat) ? yuv2yuvX10BE_c : yuv2yuvX10LE_c;
+[01;32m[K                       ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[KswScale[m[K’:
+[01m[Klibswscale/swscale.c:2375:40:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+             const int16_t **lumSrcPtr= (const int16_t **) lumPixBuf + lumBufIndex + firstLumSrcY - lastInLumBuf + vLumBufSize;
+[01;32m[K                                        ^[m[K
+[01m[Klibswscale/swscale.c:2376:41:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+             const int16_t **chrUSrcPtr= (const int16_t **) chrUPixBuf + chrBufIndex + firstChrSrcY - lastInChrBuf + vChrBufSize;
+[01;32m[K                                         ^[m[K
+[01m[Klibswscale/swscale.c:2377:41:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+             const int16_t **chrVSrcPtr= (const int16_t **) chrVPixBuf + chrBufIndex + firstChrSrcY - lastInChrBuf + vChrBufSize;
+[01;32m[K                                         ^[m[K
+[01m[Klibswscale/swscale.c:2378:78:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+             const int16_t **alpSrcPtr= (CONFIG_SWSCALE_ALPHA && alpPixBuf) ? (const int16_t **) alpPixBuf + lumBufIndex + firstLumSrcY - lastInLumBuf + vLumBufSize : NULL;
+[01;32m[K                                                                              ^[m[K
+[01m[Klibswscale/swscale.c:[m[K In function ‘[01m[Ksws_init_swScale_c[m[K’:
+[01m[Klibswscale/swscale.c:2471:46:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_RGB4_BYTE: c->chrToYV12 = palToUV_c; break;
+[01;32m[K                                              ^[m[K
+[01m[Klibswscale/swscale.c:2499:45:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_BGR24   : c->chrToYV12 = bgr24ToUV_half_c;   break;
+[01;32m[K                                             ^[m[K
+[01m[Klibswscale/swscale.c:2506:45:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_RGB24   : c->chrToYV12 = rgb24ToUV_half_c;   break;
+[01;32m[K                                             ^[m[K
+[01m[Klibswscale/swscale.c:2520:45:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_BGR24   : c->chrToYV12 = bgr24ToUV_c;   break;
+[01;32m[K                                             ^[m[K
+[01m[Klibswscale/swscale.c:2527:45:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_RGB24   : c->chrToYV12 = rgb24ToUV_c;   break;
+[01;32m[K                                             ^[m[K
+[01m[Klibswscale/swscale.c:2543:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_BGR24    : c->lumToYV12 = bgr24ToY_c;   break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2548:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_RGB24    : c->lumToYV12 = rgb24ToY_c;   break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2557:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_RGB4_BYTE: c->lumToYV12 = palToY_c; break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2558:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_MONOBLACK: c->lumToYV12 = monoblack2Y_c; break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2559:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_MONOWHITE: c->lumToYV12 = monowhite2Y_c; break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2572:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_RGBA:  c->alpToYV12 = rgbaToA_c; break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2574:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_ARGB:  c->alpToYV12 = abgrToA_c; break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:2576:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_PAL8 : c->alpToYV12 = palToA_c; break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/swscale.c:[m[K At top level:
+[01m[Klibswscale/swscale.c:1723:13:[m[K [01;35m[Kwarning: [m[K‘[01m[KLEToUV_c[m[K’ defined but not used [-Wunused-function]
+ static void LEToUV_c(uint8_t *dstU, uint8_t *dstV, const uint8_t *src1,
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1754:13:[m[K [01;35m[Kwarning: [m[K‘[01m[KBEToUV_c[m[K’ defined but not used [-Wunused-function]
+ static void BEToUV_c(uint8_t *dstU, uint8_t *dstV, const uint8_t *src1,
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1832:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KLE9ToUV_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS( 9, LE, PIX_FMT_YUV420P9LE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1820:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToUV_c(uint8_t *dstU, uint8_t *dstV, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1832:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KLE9ToY_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS( 9, LE, PIX_FMT_YUV420P9LE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1826:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToY_c(uint8_t *dstY, const uint8_t *srcY, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1833:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KBE9ToUV_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS( 9, BE, PIX_FMT_YUV420P9BE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1820:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToUV_c(uint8_t *dstU, uint8_t *dstV, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1833:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KBE9ToY_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS( 9, BE, PIX_FMT_YUV420P9BE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1826:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToY_c(uint8_t *dstY, const uint8_t *srcY, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1834:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KLE10ToUV_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS(10, LE, PIX_FMT_YUV420P10LE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1820:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToUV_c(uint8_t *dstU, uint8_t *dstV, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1834:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KLE10ToY_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS(10, LE, PIX_FMT_YUV420P10LE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1826:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToY_c(uint8_t *dstY, const uint8_t *srcY, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1835:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KBE10ToUV_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS(10, BE, PIX_FMT_YUV420P10BE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1820:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToUV_c(uint8_t *dstU, uint8_t *dstV, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale.c:1835:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KBE10ToY_c[m[K’ defined but not used [-Wunused-function]
+ YUV_NBPS(10, BE, PIX_FMT_YUV420P10BE);
+[01;32m[K              ^[m[K
+[01m[Klibswscale/swscale.c:1826:13:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KYUV_NBPS[m[K’
+ static void BE_LE ## depth ## ToY_c(uint8_t *dstY, const uint8_t *srcY, \
+[01;32m[K             ^[m[K
+[01m[Klibswscale/swscale_unscaled.c:[m[K In function ‘[01m[Ksws_scale[m[K’:
+[01m[Klibswscale/swscale_unscaled.c:700:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kcheck_image_pointers[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!check_image_pointers(src, c->srcFormat, srcStride)) {
+[01;32m[K                               ^[m[K
+[01m[Klibswscale/swscale_unscaled.c:670:12:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kuint8_t ** {aka unsigned char **}[m[K’ but argument is of type ‘[01m[Kconst uint8_t * const* {aka const unsigned char * const*}[m[K’
+ static int check_image_pointers(uint8_t *data[4], enum PixelFormat pix_fmt,
+[01;32m[K            ^[m[K
+[01m[Klibswscale/swscale_unscaled.c:704:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kcheck_image_pointers[m[K’ discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     if (!check_image_pointers(dst, c->dstFormat, dstStride)) {
+[01;32m[K                               ^[m[K
+[01m[Klibswscale/swscale_unscaled.c:670:12:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kuint8_t ** {aka unsigned char **}[m[K’ but argument is of type ‘[01m[Kuint8_t * const* {aka unsigned char * const*}[m[K’
+ static int check_image_pointers(uint8_t *data[4], enum PixelFormat pix_fmt,
+[01;32m[K            ^[m[K
+[01m[Klibswscale/swscale_unscaled.c:787:19:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kuint8_t ** {aka unsigned char **}[m[K’ to ‘[01m[Kconst uint8_t ** {aka const unsigned char **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+         reset_ptr((const uint8_t**)dst2, c->dstFormat);
+[01;32m[K                   ^[m[K
+[01m[Klibswscale/swscale_unscaled.c:810:19:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kuint8_t ** {aka unsigned char **}[m[K’ to ‘[01m[Kconst uint8_t ** {aka const unsigned char **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+         reset_ptr((const uint8_t**)dst2, c->dstFormat);
+[01;32m[K                   ^[m[K
+[01m[Klibswscale/utils.c:[m[K In function ‘[01m[Ksws_init_context[m[K’:
+[01m[Klibswscale/utils.c:940:90:[m[K [01;35m[Kwarning: [m[Kpassing argument 5 of ‘[01m[KinitMMX2HScaler[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+             initMMX2HScaler(      dstW, c->lumXInc, c->lumMmx2FilterCode, c->hLumFilter, c->hLumFilterPos, 8);
+[01;32m[K                                                                                          ^[m[K
+[01m[Klibswscale/utils.c:546:12:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint32_t * {aka int *}[m[K’ but argument is of type ‘[01m[Kint16_t * {aka short int *}[m[K’
+ static int initMMX2HScaler(int dstW, int xInc, uint8_t *filterCode, int16_t *filter, int32_t *filterPos, int numSplits)
+[01;32m[K            ^[m[K
+[01m[Klibswscale/utils.c:941:90:[m[K [01;35m[Kwarning: [m[Kpassing argument 5 of ‘[01m[KinitMMX2HScaler[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+             initMMX2HScaler(c->chrDstW, c->chrXInc, c->chrMmx2FilterCode, c->hChrFilter, c->hChrFilterPos, 4);
+[01;32m[K                                                                                          ^[m[K
+[01m[Klibswscale/utils.c:546:12:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kint32_t * {aka int *}[m[K’ but argument is of type ‘[01m[Kint16_t * {aka short int *}[m[K’
+ static int initMMX2HScaler(int dstW, int xInc, uint8_t *filterCode, int16_t *filter, int32_t *filterPos, int numSplits)
+[01;32m[K            ^[m[K
+In file included from [01m[Klibswscale/x86/swscale_mmx.c:89:0[m[K:
+[01m[Klibswscale/x86/swscale_template.c:[m[K In function ‘[01m[Ksws_init_swScale_MMX[m[K’:
+[01m[Klibswscale/x86/swscale_template.c:2465:44:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_BGR24  : c->chrToYV12 = RENAME(bgr24ToUV); break;
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:2466:44:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_RGB24  : c->chrToYV12 = RENAME(rgb24ToUV); break;
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:2479:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_BGR24    : c->lumToYV12 = RENAME(bgr24ToY); break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:2480:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_RGB24    : c->lumToYV12 = RENAME(rgb24ToY); break;
+[01;32m[K                                          ^[m[K
+In file included from [01m[Klibswscale/x86/swscale_mmx.c:98:0[m[K:
+[01m[Klibswscale/x86/swscale_template.c:[m[K In function ‘[01m[Ksws_init_swScale_MMX2[m[K’:
+[01m[Klibswscale/x86/swscale_template.c:2465:44:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_BGR24  : c->chrToYV12 = RENAME(bgr24ToUV); break;
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:2466:44:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+         case PIX_FMT_RGB24  : c->chrToYV12 = RENAME(rgb24ToUV); break;
+[01;32m[K                                            ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:2479:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_BGR24    : c->lumToYV12 = RENAME(bgr24ToY); break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:2480:42:[m[K [01;35m[Kwarning: [m[Kassignment from incompatible pointer type [-Wincompatible-pointer-types]
+     case PIX_FMT_RGB24    : c->lumToYV12 = RENAME(rgb24ToY); break;
+[01;32m[K                                          ^[m[K
+[01m[Klibswscale/x86/swscale_mmx.c:[m[K In function ‘[01m[KupdateMMXDitherTables[m[K’:
+[01m[Klibswscale/x86/swscale_mmx.c:131:36:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+         const int16_t **lumSrcPtr= (const int16_t **) lumPixBuf + lumBufIndex + firstLumSrcY - lastInLumBuf + vLumBufSize;
+[01;32m[K                                    ^[m[K
+[01m[Klibswscale/x86/swscale_mmx.c:132:37:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+         const int16_t **chrUSrcPtr= (const int16_t **) chrUPixBuf + chrBufIndex + firstChrSrcY - lastInChrBuf + vChrBufSize;
+[01;32m[K                                     ^[m[K
+[01m[Klibswscale/x86/swscale_mmx.c:133:74:[m[K [01;35m[Kwarning: [m[Kto be safe all intermediate pointers in cast from ‘[01m[Kint16_t ** {aka short int **}[m[K’ to ‘[01m[Kconst int16_t ** {aka const short int **}[m[K’ must be ‘[01m[Kconst[m[K’ qualified [-Wcast-qual]
+         const int16_t **alpSrcPtr= (CONFIG_SWSCALE_ALPHA && alpPixBuf) ? (const int16_t **) alpPixBuf + lumBufIndex + firstLumSrcY - lastInLumBuf + vLumBufSize : NULL;
+[01;32m[K                                                                          ^[m[K
+[01m[Klibswscale/x86/swscale_mmx.c:[m[K At top level:
+[01m[Klibswscale/x86/swscale_template.c:1633:20:[m[K [01;35m[Kwarning: [m[K‘[01m[KLEToUV_MMX[m[K’ defined but not used [-Wunused-function]
+ static void RENAME(LEToUV)(uint8_t *dstU, uint8_t *dstV,
+[01;32m[K                    ^[m[K
+[01m[Klibswscale/x86/swscale_mmx.c:88:19:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KRENAME[m[K’
+ #define RENAME(a) a ## _MMX
+[01;32m[K                   ^[m[K
+[01m[Klibswscale/x86/swscale_template.c:1708:20:[m[K [01;35m[Kwarning: [m[K‘[01m[KBEToUV_MMX[m[K’ defined but not used [-Wunused-function]
+ static void RENAME(BEToUV)(uint8_t *dstU, uint8_t *dstV,
+[01;32m[K                    ^[m[K
+[01m[Klibswscale/x86/swscale_mmx.c:88:19:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KRENAME[m[K’
+ #define RENAME(a) a ## _MMX
+[01;32m[K                   ^[m[K
+[01m[Klibavutil/aes.c:[m[K In function ‘[01m[Kav_aes_init[m[K’:
+[01m[Klibavutil/aes.c:160:22:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kinit_multbl2[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+         init_multbl2(dec_multbl[0], (const int[4]){0xe, 0x9, 0xd, 0xb}, log8, alog8, inv_sbox);
+[01;32m[K                      ^[m[K
+[01m[Klibavutil/aes.c:122:13:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’ but argument is of type ‘[01m[Kuint32_t * {aka unsigned int *}[m[K’
+ static void init_multbl2(uint8_t tbl[1024], const int c[4], const uint8_t *log8, const uint8_t *alog8, const uint8_t *sbox){
+[01;32m[K             ^[m[K
+[01m[Klibavutil/aes.c:161:22:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kinit_multbl2[m[K’ from incompatible pointer type [-Wincompatible-pointer-types]
+         init_multbl2(enc_multbl[0], (const int[4]){0x2, 0x1, 0x1, 0x3}, log8, alog8, sbox);
+[01;32m[K                      ^[m[K
+[01m[Klibavutil/aes.c:122:13:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kuint8_t * {aka unsigned char *}[m[K’ but argument is of type ‘[01m[Kuint32_t * {aka unsigned int *}[m[K’
+ static void init_multbl2(uint8_t tbl[1024], const int c[4], const uint8_t *log8, const uint8_t *alog8, const uint8_t *sbox){
+[01;32m[K             ^[m[K
+[01m[Klibavutil/avstring.c:[m[K In function ‘[01m[Kav_stristr[m[K’:
+[01m[Klibavutil/avstring.c:54:16:[m[K [01;35m[Kwarning: [m[Kreturn discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         return s1;
+[01;32m[K                ^[m[K
+[01m[Klibavutil/avstring.c:58:20:[m[K [01;35m[Kwarning: [m[Kreturn discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+             return s1;
+[01;32m[K                    ^[m[K
+[01m[Klibavutil/dict.c:[m[K In function ‘[01m[Kav_dict_set[m[K’:
+[01m[Klibavutil/dict.c:78:37:[m[K [01;35m[Kwarning: [m[Kassignment discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+             m->elems[m->count].key  = key;
+[01;32m[K                                     ^[m[K
+[01m[Klibavutil/dict.c:82:38:[m[K [01;35m[Kwarning: [m[Kassignment discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+             m->elems[m->count].value = value;
+[01;32m[K                                      ^[m[K
+[01m[Klibswscale/yuv2rgb.c:[m[K In function ‘[01m[Kff_yuv2rgb_c_init_tables[m[K’:
+[01m[Klibswscale/yuv2rgb.c:794:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Kabase[m[K’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+             y_table32[i     ] = (yval << rbase) + (needAlpha ? 0 : (255 << abase));
+[01;32m[K                                                                  ^[m[K
+[01m[Klibavutil/parseutils.c:[m[K In function ‘[01m[Kav_parse_video_size[m[K’:
+[01m[Klibavutil/parseutils.c:110:11:[m[K [01;35m[Kwarning: [m[Kassignment discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         p = str;
+[01;32m[K           ^[m[K
+[01m[Klibavutil/parseutils.c:[m[K In function ‘[01m[Kav_parse_time[m[K’:
+[01m[Klibavutil/parseutils.c:567:35:[m[K [01;35m[Kwarning: [m[Kcast discards ‘[01m[Kconst[m[K’ qualifier from pointer target type [-Wcast-qual]
+             dt.tm_sec = strtol(p, (char **)&q, 10);
+[01;32m[K                                   ^[m[K
+make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/video.h:28[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/video.cpp:25[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/teleop_twist.h:28[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/teleop_twist.cpp:26[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:25[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_ffmpeg_decoder.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage_decoder.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/Video/video_stage.h:27[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:63[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_driver.h:41[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_driver.cpp:30[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;35m[Kwarning: [m[Kattribute ignored in declaration of ‘[01m[Kenum AVLPCType[m[K’ [-Wattributes]
+ attribute_deprecated enum AVLPCType {
+[01;32m[K                           ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/FFMPEG/Includes/libavcodec/avcodec.h:525:27:[m[K [01;36m[Knote: [m[Kattribute for ‘[01m[Kenum AVLPCType[m[K’ must follow the ‘[01m[Kenum[m[K’ keyword
+In file included from [01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/Soft/Lib/ardrone_tool/ardrone_tool_configuration.h:14:0[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/include/ardrone_autonomy/ardrone_sdk.h:56[m[K,
+                 from [01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:25[m[K:
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/devel/.private/ardrone_autonomy/src/ardronelib/ARDroneLib/VP_SDK/VP_Api/vp_api_thread_helper.h:32:3:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   };
+[01;32m[K   ^[m[K
+[01m[K/home/trash/trash_parent_repo/catkin_ws/src/ardrone_autonomy/src/ardrone_sdk.cpp:237:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEND_THREAD_TABLE[m[K’
+   END_THREAD_TABLE
+[01;32m[K   ^[m[K
