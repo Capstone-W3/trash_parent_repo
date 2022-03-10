@@ -208,6 +208,8 @@ If needing to perform camera callibrations or other things specifically within O
 
 ### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
 
+https://github.com/appliedAI-Initiative/orb_slam_2_ros
+
 (need to remove all the `-j*` flags in `build.sh` on our forked repo)
 
 We are using `v0.3` due to limitations from the ros wrapper but otherwise we could use `v0.4` (can't remember if v1.0 works but think they phased out Ubuntu 16.04 and ros-kinetic)
@@ -215,6 +217,7 @@ We are using `v0.3` due to limitations from the ros wrapper but otherwise we cou
 ~~git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3~~
 
 ~~git -C ORB_SLAM3 checkout v0.3~~
+
 ````
 cd ORB_SLAM3
 git checkout trash
@@ -245,6 +248,9 @@ must be contained within the catkin workspace
 If the parent repo was not cloned to `$HOME`, follow instructions from above to update CMakeLists.txt with correct path
 
 ~~git clone https://github.com/thien94/orb_slam3_ros_wrapper.git~~
+
+Make sure to have run:
+`source /opt/ros/kinetic/setup.bash` but don't add to ~/ .bashrc
 
 ````
 cd catkin_ws
