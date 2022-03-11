@@ -1,6 +1,10 @@
+https://github.com/appliedAI-Initiative/orb_slam_2_ros
+
 ### For Jared and Katie
 - [Instructions](#how-to-train-yolo)
 
+# Google drive with rosbags and training data
+https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef?usp=sharing
 
 # TODO
 
@@ -18,6 +22,10 @@ https://github.com/IeiuniumLux/Visual-SLAM
 https://answers.ros.org/question/355158/roslaunch-dies-with-exit-code-11-after-it-stops-receiving-topic-from-bag-file/
 
 https://answers.ros.org/question/188823/segmentation-fault/
+
+https://github.com/leggedrobotics/darknet_ros/issues/345
+
+https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef?usp=sharing
 
 Setup of sensors
 - Install Realsense2 ros packages
@@ -101,6 +109,18 @@ python3 get-pip.py "pip < 21.0"
 
 Install ros-kinetic
 
+http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+`sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
+
+`sudo apt install curl` # if you haven't already installed curl
+
+`curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -`
+
+`sudo apt-get update`
+
+`sudo reboot`
+
 `sudo apt-get install ros-kinetic-desktop-full`
 
 `sudo apt-get install ros-kinetic-catkin python-catkin-tools`
@@ -153,6 +173,7 @@ Install version 3.3.9 of Eigen3 because it doesn't recognize the base version ht
 cd $HOME
 wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
 tar -xzvf eigen-3.3.9.tar.gz 
+rm eigen-3.3.9.tar.gz
 cd eigen-3.3.9
 
 mkdir build && cd build
@@ -168,7 +189,7 @@ The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this 
 
 ~~git clone --recursive https://github.com/stevenlovegrove/Pangolin.git~~
 ````
-cd Pangolin
+cd ~/trash_parent_repo/Pangolin
 ./scripts/install_prerequisites.sh recommended
 git checkout v0.6
 
@@ -188,6 +209,8 @@ If needing to perform camera callibrations or other things specifically within O
 
 ### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
 
+https://github.com/appliedAI-Initiative/orb_slam_2_ros
+
 (need to remove all the `-j*` flags in `build.sh` on our forked repo)
 
 We are using `v0.3` due to limitations from the ros wrapper but otherwise we could use `v0.4` (can't remember if v1.0 works but think they phased out Ubuntu 16.04 and ros-kinetic)
@@ -195,8 +218,9 @@ We are using `v0.3` due to limitations from the ros wrapper but otherwise we cou
 ~~git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3~~
 
 ~~git -C ORB_SLAM3 checkout v0.3~~
+
 ````
-cd ORB_SLAM3
+cd ~/trash_parent_repo/ORB_SLAM3
 git checkout trash
 
 chmod +x build.sh
@@ -225,6 +249,9 @@ must be contained within the catkin workspace
 If the parent repo was not cloned to `$HOME`, follow instructions from above to update CMakeLists.txt with correct path
 
 ~~git clone https://github.com/thien94/orb_slam3_ros_wrapper.git~~
+
+Make sure to have run:
+`source /opt/ros/kinetic/setup.bash` but don't add to ~/ .bashrc
 
 ````
 cd catkin_ws
