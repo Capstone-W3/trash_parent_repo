@@ -144,7 +144,7 @@ For any terminal shell that you wish to run ros commands from you must now run
 
 ### Dependencies and their dependencies
 
-#### Pangolin
+#### Pangolin (no longer needed)
 
 ##### CMake
 
@@ -181,7 +181,7 @@ cmake ..
 sudo make install
 ````
 
-##### Pangolin itself
+##### Pangolin itself (skip for now)
 
 The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/Pangolin/pull/715) from Pangolin. Waiting to see if this can be resolved and no longer needed
 
@@ -212,6 +212,8 @@ If needing to perform camera callibrations or other things specifically within O
 https://github.com/appliedAI-Initiative/orb_slam_2_ros
 
 (need to remove all the `-j*` flags in `build.sh` on our forked repo)
+
+We have forked the https://github.com/appliedAI-Initiative/orb_slam_2_ros repository. This repository uses ORBSLAM2. We have worked on this repo to work with ORBSLAM3. The correct branch to be on is orb_slam_3_fast, which uses ORBSLAM3. 
 
 We are using `v0.3` due to limitations from the ros wrapper but otherwise we could use `v0.4` (can't remember if v1.0 works but think they phased out Ubuntu 16.04 and ros-kinetic)
 
