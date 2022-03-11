@@ -1,6 +1,0 @@
-navigation/clear_costmap_recovery
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/clear_costmap_recovery/cmake.lock /home/trash/trash_parent_repo/catkin_ws/devel/./cmake.lock
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/clear_costmap_recovery/share/clear_costmap_recovery/cmake/clear_costmap_recoveryConfig-version.cmake /home/trash/trash_parent_repo/catkin_ws/devel/share/clear_costmap_recovery/cmake/clear_costmap_recoveryConfig-version.cmake
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/clear_costmap_recovery/share/clear_costmap_recovery/cmake/clear_costmap_recoveryConfig.cmake /home/trash/trash_parent_repo/catkin_ws/devel/share/clear_costmap_recovery/cmake/clear_costmap_recoveryConfig.cmake
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/clear_costmap_recovery/lib/libclear_costmap_recovery.so /home/trash/trash_parent_repo/catkin_ws/devel/lib/libclear_costmap_recovery.so
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/clear_costmap_recovery/lib/pkgconfig/clear_costmap_recovery.pc /home/trash/trash_parent_repo/catkin_ws/devel/lib/pkgconfig/clear_costmap_recovery.pc

@@ -1,6 +1,0 @@
-navigation/voxel_grid
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/voxel_grid/cmake.lock /home/trash/trash_parent_repo/catkin_ws/devel/./cmake.lock
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/voxel_grid/share/voxel_grid/cmake/voxel_gridConfig-version.cmake /home/trash/trash_parent_repo/catkin_ws/devel/share/voxel_grid/cmake/voxel_gridConfig-version.cmake
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/voxel_grid/share/voxel_grid/cmake/voxel_gridConfig.cmake /home/trash/trash_parent_repo/catkin_ws/devel/share/voxel_grid/cmake/voxel_gridConfig.cmake
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/voxel_grid/lib/libvoxel_grid.so /home/trash/trash_parent_repo/catkin_ws/devel/lib/libvoxel_grid.so
-/home/trash/trash_parent_repo/catkin_ws/devel/.private/voxel_grid/lib/pkgconfig/voxel_grid.pc /home/trash/trash_parent_repo/catkin_ws/devel/lib/pkgconfig/voxel_grid.pc
