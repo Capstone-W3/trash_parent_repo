@@ -37,3 +37,8 @@
 
  # because everyone hates logs
 *.log
+
+
+/catkin_ws/logs/
+/catkin_ws/.catkin/tools/
+
