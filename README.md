@@ -1,4 +1,15 @@
-https://github.com/appliedAI-Initiative/orb_slam_2_ros
+### For John
+
+#### [orb_slam_3_ros](https://github.com/Capstone-W3/orb_slam_3_ros/tree/orb-slam3-fast)
+
+Using branch `orb-slam3-fast` which removes Pangolin dependency. 
+
+Build using only a single core if breaking due to lack of memory 
+
+`catkin build -j1 orb_slam3_ros`
+
+`roslaunch orb_slam3_ros orb_slam2_d435_rgbd.launch`
+
 
 ### For Jared and Katie
 - [Instructions](#how-to-train-yolo)
