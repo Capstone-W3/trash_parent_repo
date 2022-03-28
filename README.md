@@ -10,6 +10,11 @@ Build using only a single core if breaking due to lack of memory
 
 `roslaunch orb_slam3_ros orb_slam2_d435_rgbd.launch`
 
+Looks like we removed the octomap installs
+````
+sudo apt-get install ros-kinetic-octomap ros-kinetic-octomap-mapping ros-kinetic-octomap-msgs ros-kinetic-octomap-ros ros-kinetic-octomap-rviz-plugins ros-kinetic-octomap-server
+````
+
 
 ### For Jared and Katie
 - [Instructions](#how-to-train-yolo)
