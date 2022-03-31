@@ -1,18 +1,49 @@
+import rospy
+
+
 class AntiCluster:
-    def _init_(self, x, y):
+    def __init__(self, x, y, init_node=False):
+        if init_node:
+            rospy.init_node('aggregate_points')
+
+        rospy.Subscriber("/trash_mapper/trash_points", Pose(), self.addPoint)
         self._XLENGTH_ = x  # cm
         self._YLENGTH_ = y  # cm
+        self.listOfPoints = []
+
+    def addPoint(self, data):
+        self.listOfPoints.append(data)
+        self.listOfPoints = self.aggregatePoints(self.listOfPoints)
 
     def aggregatePoints(self, points):
+        x = 0
+        y = 1
+        endX = len(points)
 
-        for x in range(0, points.size()):
-            xRangeTop = points[x].x + self._XLENGTH_
-            yRangeTop = points[x].y + self._YLENGTH_
-            xRangeBottom = points[x].x - self._XLENGTH_
-            yRangeBottom = points[x].y - self._YLENGTH_
+        while x < endX:
+            y = x + 1
+            xRangeTop = points[x].position.x + self._XLENGTH_
+            yRangeTop = points[x].position.y + self._YLENGTH_
+            xRangeBottom = points[x].position.x - self._XLENGTH_
+            yRangeBottom = points[x].position.y - self._YLENGTH_
 
-            for y in range(1, points.size()):
-                if xRangeBottom < points[y].x < xRangeTop and yRangeBottom < points[y].y < yRangeTop:
+            while y < endX:
+                if xRangeBottom <= points[y].position.x <= xRangeTop and yRangeBottom <= points[y].position.y <= yRangeTop:
+                    print(points[x])
+                    print(points[y])
                     points.pop(y)
+                    endX = endX - 1
+                y = y + 1
+
+            x = x + 1
 
         return points
+
+
+if __name__ == "__main__":
+    first = [(1, 2), (20, 4), (3, 20), (20, 20), (1, 1), (21, 20), (40, 40)]
+    print(first)
+
+    cluster = AntiCluster(2, 2)
+    last = cluster.aggregatePoints(first)
+    print(last)
