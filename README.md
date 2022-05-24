@@ -1,6 +1,6 @@
 # Terrestrial Roving Autonomous Scrap Harvester (TRASH)
 
-Welcome to the home repository for Northeastern's EECE Capstone team named TRASH. The TRASH system is designed to use map out and pick up trash in a particular area. This file serves as a full guide to getting our codebase set up on your own machine. 
+Welcome to the home repository for Northeastern's EECE Capstone team named TRASH. The TRASH system is designed to map out and pick up trash in a particular area. This file serves as a full guide to getting our codebase set up on your own machine. 
 
 
 # README Outline
