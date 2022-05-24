@@ -1,4 +1,6 @@
+# Terrestrial Roving Autonomous Scrap Harvester (TRASH)
 
+Welcome to the home repository for Northeastern's EECE Capstone team named TRASH. The TRASH system is designed to use map out and pick up trash in a particular area. This file serves as a full guide to getting our codebase set up on your own machine. 
 
 
 # README Outline
@@ -8,9 +10,7 @@
 3. [Setup Instructions](#setup-instructions)
   - First Install 
     1. [Clone This Repository](#clone-this-repository)
-    2. General Dependencies
-      2.1. [pip3](#pip3)
-      2.2. [ROS](#ros)
+    2. [General Dependencies](#general-dependencies)
   - [Speed Setup (Copy & Paste)](#speed-setup)
   - [Full Instructions](#full-instructions)
     1. [Complete Project](#)
@@ -36,7 +36,10 @@ words
 
 
 Setup Instructions Outline
-- C
+    1. [Clone This Repository](#clone-this-repository)
+    2. General Dependencies
+      2.1. [pip3](#pip3)
+      2.2. [ROS](#ros)
 
 ## Clone This Repository
 
