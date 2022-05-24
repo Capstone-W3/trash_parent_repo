@@ -1,80 +1,37 @@
-### For John
-
-#### [orb_slam_3_ros](https://github.com/Capstone-W3/orb_slam_3_ros/tree/orb-slam3-fast)
-
-Using branch `orb-slam3-fast` which removes Pangolin dependency. 
-
-Build using only a single core if breaking due to lack of memory 
-
-`catkin build -j1 orb_slam3_ros`
-
-`roslaunch orb_slam3_ros orb_slam2_d435_rgbd.launch`
-
-Looks like we removed the octomap installs
-````
-sudo apt-get install ros-kinetic-octomap ros-kinetic-octomap-mapping ros-kinetic-octomap-msgs ros-kinetic-octomap-ros ros-kinetic-octomap-rviz-plugins ros-kinetic-octomap-server
-````
 
 
-### For Jared and Katie
-- [Instructions](#how-to-train-yolo)
 
-# Google drive with rosbags and training data
-https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef?usp=sharing
+## README Outline
 
-# TODO
-
-
-https://gist.github.com/rethink-imcmahon/77a1a4d5506258f3dc1f?permalink_comment_id=3577587#gistcomment-3577587
-
-https://github.com/leggedrobotics/darknet_ros/issues/205
-
-https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef
-
-http://tacodataset.org/
-
-https://github.com/IeiuniumLux/Visual-SLAM
-
-https://answers.ros.org/question/355158/roslaunch-dies-with-exit-code-11-after-it-stops-receiving-topic-from-bag-file/
-
-https://answers.ros.org/question/188823/segmentation-fault/
-
-https://github.com/leggedrobotics/darknet_ros/issues/345
-
-https://drive.google.com/drive/folders/1bLo9Ca3X3cnFm1wuKJpPVZGTskb2vgef?usp=sharing
-
-Setup of sensors
-- Install Realsense2 ros packages
-  - `sudo apt-get install ros-kinetic-realsense2-camera`
-  - This doesn't work out of box, follow instructions for adding udev rules for camera [here](https://github.com/IntelRealSense/realsense-ros/issues/1408#issuecomment-698128999)
-- All 3 of our cameras need callibration (drone front and bottom and turtlebot)
-  - How to callibrate cameras [using OpenCV](https://docs.opencv.org/3.4/d6/d55/tutorial_table_of_content_calib3d.html), which we already have in the project
-  - Need an orbslam camera yaml file for front facing in [this form](https://github.com/Capstone-W3/ORB_SLAM3/blob/v0.3-beta/Examples/Monocular-Inertial/EuRoC.yaml)
-   - AR Drone front can be found [here](https://github.com/jwangjie/Mapping-ARDrone/blob/master/orb_slam2/Examples/Monocular/ardrone.yaml)
-   - RealSense camera setup file [exists](https://github.com/Capstone-W3/ORB_SLAM3/tree/v1.0-release/Examples/Monocular-Inertial) but in their new format, need to revert to old format
-- To use Monocular-Intertial (camera and imu gives better results), need to get the IMU callibrations on both robots
-- Turtlebot needs gyro and odometry callibration for navigation [here](http://wiki.ros.org/turtlebot_calibration/Tutorials/Calibrate%20Odometry%20and%20Gyro)
-
-Translate ORB-SLAM output from point clouds to octree with Octomap for path planning
-- [ORB_SLAM3_Grid_Mapping](https://github.com/MrPicklesGG/ORB_SLAM3_Grid_Mapping)
-  - [adapted from ORB-SLAM2 version repo](https://github.com/abhineet123/ORB_SLAM2)
-  - [paper of ORB-SLAM2 version](https://github.com/abhineet123/ORB_SLAM2/blob/master/2d-grid-mapping.pdf)
-- Potential Recources
-- https://github.com/charbelias24/3dMapSLAM#24-octomap
-- https://github.com/OctoMap/octomap_mapping/tree/kinetic-devel 
-- https://github.com/OctoMap/octomap_ros/tree/kinetic-devel (the above is probably better than this)
+- (INTRODUCTION)[]
+- (EXPECTED KNOWLDGE)[]
+- (Setup Instructions)[]
+  - (ROS)[]
+  - (Speed Setup (Copy & Paste))[]
+  - (Full Instructions)[]
+    - (Just ORB-SLAM2)[]
+    - (Just YOLOv4)[]
+    - (Full Project)[]
+- 
+    
+    
 
 
-YOLO for our application and SLAM 
 
-- ~~Get YOLO Darknet setup ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))~~
-  - ~~Should be easy since this version is specifically for Kinetic and Ubunutu 16.04~~
-- Run YOLO with UAVVaste dataset ([git-repo](https://github.com/UAVVaste/UAVVaste))
-  - This could be super easy but unsure because they almost certainly used a different version of YOLO
-  - [How to train to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
-  - 
-  - [how-to-improve-object-detection](https://github.com/AlexeyAB/darknet#how-to-improve-object-detection)
-  - [Convert COCO style annotations to YOLO format](https://github.com/qwirky-yuzu/COCO-to-YOLO) for images from [UAVVaste](https://github.com/UAVVaste/UAVVaste)
+### ORB-SLAM2
+
+##### ORB-SLAM2 Outline
+
+- Dependency Installs
+  - pip3
+  - CMAKE
+  - Eigen3
+  - Pangolin
+  - OpenCV
+- 
+
+
+
 
 **TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
 
@@ -628,27 +585,4 @@ rosbag play ${PATH TO THE BAG FILE}
 roslaunch orb_slam2_ros raspicam_mono_wide.launch
 ````
 
-
-
-
-
-
-# Packaged Needed 
-
-### For all of ORB-SLAM
-
-
-### For only robot example
-
-`sudo apt-get install ros-kinetic-move-base-msgs`
-
-`sudo apt-get install ros-kinetic-octomap-rviz-plugins`
-
-`sudo apt-get install ros-kinetic-diff-drive-controller`
-
-````
-git clone https://github.com/WiringPi/WiringPi
-cd WiringPi
-./build
-````
 
