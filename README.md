@@ -3,18 +3,18 @@
 
 ## README Outline
 
-- (INTRODUCTION)[]
-- (EXPECTED KNOWLDGE)[]
-- (Setup Instructions)[]
-  - Clone This Repository
+- (INTRODUCTION)[introduction]
+- (EXPECTED KNOWLDGE)[expected-knowldege]
+- (Setup Instructions)[setup-instructions]
+  1. (Clone This Repository)[clone-this-repository]
     - General Dependencies
-      - (pip3)[]
-      - (ROS)[]
-  - (Speed Setup (Copy & Paste))[]
-  - (Full Instructions)[]
-    - (Just ORB-SLAM2)[]
-    - (Just YOLOv4)[]
-    - (Full Project)[]
+      1.1. (pip3)[pip3]
+      1.2. (ROS)[ros]
+  2. (Speed Setup (Copy & Paste))[copy&paste]
+  3. (Full Instructions)[full-instructions]
+    3.1. (Just ORB-SLAM2)[]
+    3.2. (Just YOLOv4)[]
+    3.3. (Full Project)[]
 - 
 
 
