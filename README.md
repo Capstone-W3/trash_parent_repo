@@ -36,6 +36,7 @@ words
 
 
 Setup Instructions Outline
+
     1. [Clone This Repository](#clone-this-repository)
     2. General Dependencies
       2.1. [pip3](#pip3)
