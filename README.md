@@ -21,22 +21,6 @@
 
 
 
-### ORB-SLAM2
-
-##### ORB-SLAM2 Outline
-
-- Dependency Installs
-  - CMAKE
-  - Eigen3
-  - Pangolin
-  - OpenCV
-- Building ORB-SLAM2
-- Running ORB-SLAM2
-
-
-
-
-
 ### Clone This Repository
 
 `git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
@@ -100,6 +84,37 @@ To check whether this has been done on pre-installed ros, open `~/.bashrc` (`cod
 For any terminal shell that you wish to run ros commands from you must now run
 
 `source /opt/ros/kinetic/setup.bash` or for this specific project's catkin workspace `source ~/trash_parent_repo/catkin_ws/devel/setup.bash`
+
+
+
+
+
+
+
+
+
+
+## ORB-SLAM2
+
+#### ORB-SLAM2 Outline
+
+- Dependency Installs
+  - CMAKE
+  - Eigen3
+  - Pangolin
+  - OpenCV
+- Building ORB-SLAM2
+- Running ORB-SLAM2
+
+
+
+
+
+
+
+
+
+
 
 
 **TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
