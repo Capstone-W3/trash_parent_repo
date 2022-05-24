@@ -28,7 +28,14 @@
   - Eigen3
   - Pangolin
   - OpenCV
-- 
+- Building ORB-SLAM2
+- Running ORB-SLAM2
+
+
+
+
+
+
 
 
 
