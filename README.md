@@ -6,19 +6,24 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 # README Outline
 
 1. [INTRODUCTION](#1-introduction)
-2. [EXPECTED KNOWLDGE](#expected-knowldege)
-  - Ubuntu 16.04
-  - ROS (Kintetic)
-4. [Project Setup Instructions](#setup-instructions)
-  - Initial Downloads
-    1. [Clone This Repository](#clone-this-repository)
-    2. [General Dependencies](#general-dependencies)
-  - [Speed Setup (Just Copy & Paste)](#speed-setup)
-  - [Full Instructions](#full-instructions)
-    1. [Complete Project](#)
-    2. [Just ORB-SLAM2](#)
-    3. [Just YOLOv4](#)
-- 
+2. [EXPECTED KNOWLDGE](#2-expected-knowldege)
+    - Ubuntu 16.04
+    - ROS (Kintetic)
+3. [Project Setup Instructions](#3-setup-instructions)
+    - Initial Downloads
+      1. [Clone This Repository](#clone-this-repository)
+      2. [General Dependencies](#general-dependencies)
+    - [Speed Setup (Just Copy & Paste)](#speed-setup)
+    - [Full Instructions](#full-instructions)
+      1. [Complete Project](#)
+      2. [Just ORB-SLAM2](#)
+      3. [Just YOLOv4](#)
+4. [Project Run Instructions](#)
+    - ORB-SLAM2
+    - YOLOv4
+    - Full Project
+
+5. [Contact Us](#contact)
 
 
 
@@ -29,6 +34,15 @@ words
 ## 2. Expected Knowldege
 
 words
+
+#### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
+
+This repo contains submodules (forked from the original open source repos)
+Run the following command after cloning, and whenever you want the submodules update
+
+git submodule update --init --recursive
+
+To learn more about submodules, this link may help: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 ---
 
@@ -56,9 +70,9 @@ OR if git version is 2.23 or greater
 `git clone --recurse-submodules --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
 
-### General Dependencies
+## General Dependencies
 
-#### pip3
+### pip3
 
 `sudo apt-get install python3-pip`
 
@@ -75,7 +89,7 @@ curl -sSL https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
 python3 get-pip.py "pip < 21.0"
 ````
 
-#### ROS
+### ROS
 
 Install ros-kinetic
 
@@ -83,7 +97,7 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
 
-`sudo apt install curl` # if you haven't already installed curl
+`sudo apt install curl`
 
 `curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -`
 
@@ -91,13 +105,15 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 `sudo reboot`
 
-`sudo apt-get install ros-kinetic-desktop-full`
+````
+sudo apt-get install ros-kinetic-desktop-full
 
-`sudo apt-get install ros-kinetic-catkin python-catkin-tools`
+sudo apt-get install ros-kinetic-catkin python-catkin-tools
 
-`sudo apt-get install ros-kinetic-catkin python-controller-manager`
+sudo apt-get install ros-kinetic-catkin python-controller-manager
 
-`sudo apt-get install ros-kinetic-pid`
+sudo apt-get install ros-kinetic-pid
+````
 
 **DO NOT** run the suggested command from ros that adds `source /opt/ros/kinetic/setup.bash` to your `~/.bashrc`. This will cause the `ros` version of any package to be the system defaults (opencv will be sourced from the ros version not the one you install)
 
@@ -120,14 +136,105 @@ For any terminal shell that you wish to run ros commands from you must now run
 
 #### ORB-SLAM2 Outline
 
-- Dependency Installs
-  - CMAKE
-  - Eigen3
-  - Pangolin
-  - OpenCV
+- [Dependency Installs](#orb-slam2-dependencies)
+    1. CMAKE
+    2. Eigen3
+    3. Pangolin
+    4. OpenCV
 - Building ORB-SLAM2
-- Running ORB-SLAM2
 
+If desired you can jump directly to [running ORB-SLAM2](running-orb-slam2)
+
+### ORB-SLAM2 Dependencies
+
+#### CMake
+
+Requires updated version of CMake, but many way of doing this update will break a pre-installed ros implementation
+
+````
+cd $HOME
+wget https://github.com/Kitware/CMake/releases/download/v3.22.2/cmake-3.22.2.tar.gz
+tar xzf cmake-3.22.2.tar.gz
+rm -rf cmake-3.22.2.tar.gz
+cd cmake-3.22.2
+./configure
+make
+sudo make install
+echo 'export PATH=$HOME/cmake-3.22.2/bin:$PATH' >> ~/.bashrc
+echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-3.22.2:$CMAKE_PREFIX_PATH' >> ~/.bashrc
+````
+
+Check that everything worked using `cmake --version`
+
+#### Eigen3
+
+Install version 3.3.9 of Eigen3 because it doesn't recognize the base version, [as seen here](https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html)
+
+````
+cd $HOME
+wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
+tar -xzvf eigen-3.3.9.tar.gz 
+rm eigen-3.3.9.tar.gz
+cd eigen-3.3.9
+
+mkdir build && cd build
+cmake ..
+sudo make install
+````
+
+#### Pangolin
+
+````
+cd ~/trash_parent_repo/Pangolin
+./scripts/install_prerequisites.sh recommended
+git checkout v0.6
+
+mkdir -p build && cd build
+cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
+cmake --build .
+````
+
+The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/Pangolin/pull/715) from Pangolin
+
+The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this will default to the home directory but can be changed
+
+#### OpenCV
+
+````
+cd ~/trash_parent_repo/opencv
+git -C opencv checkout 3.4
+mkdir -p build && cd build
+cmake .. -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local
+sudo make install
+````
+
+make sure that when you `cmake` that you see both versions of python
+
+````
+--   Python 2:
+--     Interpreter:                 /usr/bin/python2.7 (ver 2.7.6)
+--     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython2.7.so (ver 2.7.6)
+--     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.8.2)
+--     packages path:               lib/python2.7/dist-packages
+--
+--   Python 3:
+--     Interpreter:                 /usr/bin/python3.4 (ver 3.4.3)
+--     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython3.4m.so (ver 3.4.3)
+--     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.8.2)
+--     packages path:               lib/python3.4/dist-packages
+````
+
+If having issues with `make -j4` freezing the machine, remove the parallel option and just run `make`
+
+https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
+
+https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
+
+
+
+If OpenCV is only needed for the dependencies from other repos you can just install through `pip3`
+
+`pip3 install opencv-python==3.4.6.27`
 
 
 
@@ -151,104 +258,11 @@ For any terminal shell that you wish to run ros commands from you must now run
   - Look for papers using YOLO with slam and see if they have solutions
   - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
 
-# Clone this repo and its submodules
-
-
-#### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
 
 
 
 
-# ORB-SLAM3 and its ros wrapper
 
-## ORB-SLAM3
-
-### Dependencies and their dependencies
-
-#### Pangolin (no longer needed)
-
-##### CMake
-
-Requires updated version of CMake, but many way of doing this will break a pre-installed ros implementation
-
-````
-cd $HOME
-wget https://github.com/Kitware/CMake/releases/download/v3.22.2/cmake-3.22.2.tar.gz
-tar xzf cmake-3.22.2.tar.gz
-rm -rf cmake-3.22.2.tar.gz
-cd cmake-3.22.2
-./configure
-make
-sudo make install
-echo 'export PATH=$HOME/cmake-3.22.2/bin:$PATH' >> ~/.bashrc
-echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-3.22.2:$CMAKE_PREFIX_PATH' >> ~/.bashrc
-````
-
-Check that everything worked using `cmake --version`
-
-##### Eigen3
-
-Install version 3.3.9 of Eigen3 because it doesn't recognize the base version https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html
-
-````
-cd $HOME
-wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
-tar -xzvf eigen-3.3.9.tar.gz 
-rm eigen-3.3.9.tar.gz
-cd eigen-3.3.9
-
-mkdir build && cd build
-cmake ..
-sudo make install
-````
-
-##### Pangolin itself (skip for now)
-
-The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/Pangolin/pull/715) from Pangolin. Waiting to see if this can be resolved and no longer needed
-
-The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this will default to the home directory but can be changed
-
-~~git clone --recursive https://github.com/stevenlovegrove/Pangolin.git~~
-````
-cd ~/trash_parent_repo/Pangolin
-./scripts/install_prerequisites.sh recommended
-git checkout v0.6
-
-mkdir -p build && cd build
-cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
-cmake --build .
-````
-
-#### OpenCV
-
-If OpenCV is only needed for the dependencies from other repos you can just install through `pip3`
-
-`pip3 install opencv-python==3.4.6.27`
-
-If needing to perform camera callibrations or other things specifically within OpenCV, see other OpenCV section towards the bottom of this repo (should link to it)
-
-
-### ORB_SLAM3 ([repo](https://github.com/UZ-SLAMLab/ORB_SLAM3))
-
-https://github.com/appliedAI-Initiative/orb_slam_2_ros
-
-(need to remove all the `-j*` flags in `build.sh` on our forked repo)
-
-We have forked the https://github.com/appliedAI-Initiative/orb_slam_2_ros repository. This repository uses ORBSLAM2. We have worked on this repo to work with ORBSLAM3. The correct branch to be on is orb_slam_3_fast, which uses ORBSLAM3. 
-
-We are using `v0.3` due to limitations from the ros wrapper but otherwise we could use `v0.4` (can't remember if v1.0 works but think they phased out Ubuntu 16.04 and ros-kinetic)
-
-~~git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git ORB_SLAM3~~
-
-~~git -C ORB_SLAM3 checkout v0.3~~
-
-````
-cd ~/trash_parent_repo/ORB_SLAM3
-git checkout trash
-
-chmod +x build.sh
-./build.sh
-````
 
 #### Downloading datasets
 
@@ -302,6 +316,18 @@ and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/i
 `rosbag play V1_01_easy.bag`
 
 
+
+
+
+
+
+
+&nbsp; 
+
+&nbsp; 
+
+&nbsp; 
+
 ## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
 ### How to train YOLO
@@ -352,285 +378,13 @@ https://github.com/leggedrobotics/darknet_ros/issues/93#issuecomment-520524269
 https://link.springer.com/article/10.1007/s00521-021-06764-3
 
 
-#### UAVVaste
-
-````
-git clone https://github.com/Capstone-W3/UAVVaste
-cd UAVVaste
-pip3 install -r requirements.txt
-python3 main.py
-````
-This script is written using f-strings (which are not supported in python3.5) so lines 15, 18, and 22 need to be changed to not use this format.
-
-To translate from their COCO-like format to YOLO format 
-
-`python3 coco_to_yolo.py`
 
 
-&nbsp; 
 
-&nbsp; 
-
-&nbsp; 
 
 &nbsp;
 
 &nbsp;
 
 &nbsp;
-
-
-## Trying different approach and tracking required steps
-
-### Using regular ORB-SLAM2
-
-#### Dependencies and their dependencies
-
-###### Pangolin
-
-Requires updated version of CMake, but many way of doing this will break a pre-installed ros implementation
-
-From https://askubuntu.com/a/976700. Download cmake (https://cmake.org/download/) I used cmake-3.22.2.tar.gz
-
-````
-cd $CMAKE_DOWNLOAD_PATH
-./configure
-make
-sudo make install
-echo 'export PATH=$HOME/cmake-install/bin:$PATH' >> ~/.bashrc
-echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bashrc
-````
-Check that everything worked using `cmake --version`
-
-Should be able to follow these for full command line (but have not tested yet)
-
-````
-wget https://cmake.org/files/v3.22/cmake-3.22.2-Linux-x86_64.tar.gz
-tar xzf cmake-3.22.2-Linux-x86_64.tar.gz
-rm -rf cmake-3.22.2-Linux-x86_64.tar.gz
-cd cmake-3.22.3-Linux-x86_64
-./configure
-make
-sudo make install
-echo 'export PATH=$HOME/cmake-install/bin:$PATH' >> ~/.bashrc
-echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH' >> ~/.bashrc
-````
-
-Then install version 3.3.9 of Eigen3 because it doesn't recognize the base version https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html
-````
-cd ~
-wget https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz
-tar -xzvf eigen-3.3.9.tar.gz 
-cd eigen-3.3.9
-
-mkdir build && cd build
-cmake ..
-sudo make install
-````
-
-
-Now can install Pangolin (though locating eigen is not currently working)
-
-````
-# Get Pangolin
-cd ~/your_fav_code_directory
-git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
-cd Pangolin 
-
-# Install dependencies (as described above, or your preferred method)
-./scripts/install_prerequisites.sh recommended
-
-# Configure and build
-mkdir -p build && cd build
-cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
-cmake --build .
-
-# GIVEME THE PYTHON STUFF!!!! (Check the output to verify selected python version)
-cmake --build . -t pypangolin_pip_install
-
-# Run me some tests! (Requires Catch2 which must be manually installed on Ubuntu.)
-ctest
-````
-
-Currently trying to resolve issue https://github.com/stevenlovegrove/Pangolin/issues/714
-
-Circumvented problem by changing branches for building (not doing it right away so we can still use the `install_prerequisites.sh` script)
-
-````
-git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
-cd Pangolin
-./scripts/install_prerequisites.sh recommended
-git checkout v0.6
-
-mkdir -p build && cd build
-cmake .. -DEigen3_DIR=$HOME/eigen-3.3.9/build
-cmake --build .
-````
-
-###### OpenCV
-
-https://docs.opencv.org/4.x/d0/d3d/tutorial_general_install.html
-
-https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
-
-(if computer is capable of handling multi-thread run with something like `sudo make -j4 install`)
-
-This will take 20+ minutes so be ready to let it run
-
-git clone https://github.com/opencv/opencv
-
-git -C opencv checkout 3.4
-````
-cd opencv
-mkdir -p build && cd build
-cmake .. -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local
-sudo make install
-````
-
-make sure that when you `cmake` that you see both versions of python~~
-
-````
---   Python 2:
---     Interpreter:                 /usr/bin/python2.7 (ver 2.7.6)
---     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython2.7.so (ver 2.7.6)
---     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.8.2)
---     packages path:               lib/python2.7/dist-packages
---
---   Python 3:
---     Interpreter:                 /usr/bin/python3.4 (ver 3.4.3)
---     Libraries:                   /usr/lib/x86_64-linux-gnu/libpython3.4m.so (ver 3.4.3)
---     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.8.2)
---     packages path:               lib/python3.4/dist-packages
-````
-
-If having issues with `make -j4` freezing the machine, remove the parallel option and just run `make`
-
-#### Build ORB-SLAM2
-
-Inside the catkin workspace
-
-`git clone https://github.com/raulmur/ORB_SLAM2.git ORB_SLAM2`
-
-For base ORB-SLAM2 
-
-````
-cd ORB_SLAM2
-chmod +x build.sh
-./build.sh
-````
-
-Then for ROS compatability
-`./build_ros.sh`
-
-Then to run https://github.com/raulmur/ORB_SLAM2#running-monocular-node
-
-`rosrun ORB_SLAM2 Mono PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE`
-
-`rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/TUM1.yaml`
-
-
-##### Issues 
-
-###### For base
-
-If failing due to do `‘usleep’ was not declared`
-
-https://github.com/raulmur/ORB_SLAM2/pull/932 and https://github.com/raulmur/ORB_SLAM2/pull/824
-
-If failing due to internal compiler error
-
-https://github.com/raulmur/ORB_SLAM2/issues/305
-
-Just remove the `-j` options from all `make` instructions in `build.sh` and in `build_ros.sh`
-
-###### For ros compatability
-
-if getting
-````
-Consolidate compiler generated dependencies of target Stereo
-[ 66%] Linking CXX executable ../Stereo
-/usr/bin/ld: CMakeFiles/Stereo.dir/src/ros_stereo.cc.o: undefined reference to symbol '_ZN5boost6system15system_categoryEv'
-/usr/lib/x86_64-linux-gnu/libboost_system.so: error adding symbols: DSO missing from command line
-collect2: error: ld returned 1 exit status
-CMakeFiles/Stereo.dir/build.make:229: recipe for target '../Stereo' failed
-make[2]: *** [../Stereo] Error 1
-CMakeFiles/Makefile2:717: recipe for target 'CMakeFiles/Stereo.dir/all' failed
-make[1]: *** [CMakeFiles/Stereo.dir/all] Error 2
-Makefile:135: recipe for target 'all' failed
-make: *** [all] Error 2
-````
-
-https://github.com/raulmur/ORB_SLAM2/issues/494
-
-Final fix: in `ORB_SLAM2/Examples/ROS/ORB_SLAM2/CMakeList.txt` add `-lboost_system` to `set` so that it looks like
-
-````
-set(LIBS 
-${OpenCV_LIBS} 
-${EIGEN3_LIBS}
-${Pangolin_LIBRARIES}
-${PROJECT_SOURCE_DIR}/../../../Thirdparty/DBoW2/lib/libDBoW2.so
-${PROJECT_SOURCE_DIR}/../../../Thirdparty/g2o/lib/libg2o.so
-${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2.so
--lboost_system
-)
-````
-
-
-
-To change image data from compressed to raw https://answers.ros.org/question/35183/compressed-image-to-image/
-
-
-In pure ORB-SLAM3
-
-`./Monocular/mono_euroc ../Vocabulary/ORBvoc.txt ./Monocular/EuRoC.yaml ~/Downloads/mav0 ./Monocular/EuRoC_TimeStamps/V101.txt dataset-V101_mono`
-
-
-
-
-
-# ORB-SLAM 2 Workspace
-The development environment for the UGV
-
-
-This repo contains submodules (forked from the original open source repos)
-Run the following command after cloning, and whenever you want the submodules update
-
-git submodule update --init --recursive
-
-To learn more about submodules, this link may help: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-
-# TO Run
-
-`git clone https://github.com/Capstone-W3/orb_slam2_workspace`
-
-`cd orb_slam2_workspace`
-
-`git submodule update --init --recursive`
-
-`cd orb_slam_ws`
-
-`catkin init`
-
-`cd src/ORB-SLAM2_ROS/ORB_SLAM2`
-
-`sudo chmod +x build*`
-
-`./build_catkin.sh`
-(All errors this throws should be due to missing packages)
-
-`cd ../..` (to orb_slam_ws)
-
-`catkin build`
-
-`source devel/setup.bash`
-
-If these last 3 fail, try them in another order
-
-````
-roslaunch diff_drive_mapping_robot robot_offline.launch
-rosbag play ${PATH TO THE BAG FILE}
-roslaunch orb_slam2_ros raspicam_mono_wide.launch
-````
-
 
