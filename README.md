@@ -16,10 +16,22 @@
     - (Just YOLOv4)[]
     - (Full Project)[]
 - 
-    
-    
 
 
+
+## Introduction
+
+words
+
+## Expected Knowldege
+
+words
+
+---
+
+## Setup Instructions
+
+words
 
 ### Clone This Repository
 
