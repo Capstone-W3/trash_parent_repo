@@ -6,7 +6,10 @@
 - (INTRODUCTION)[]
 - (EXPECTED KNOWLDGE)[]
 - (Setup Instructions)[]
-  - (ROS)[]
+  - Clone This Repository
+    - General Dependencies
+      - (pip3)[]
+      - (ROS)[]
   - (Speed Setup (Copy & Paste))[]
   - (Full Instructions)[]
     - (Just ORB-SLAM2)[]
@@ -23,7 +26,6 @@
 ##### ORB-SLAM2 Outline
 
 - Dependency Installs
-  - pip3
   - CMAKE
   - Eigen3
   - Pangolin
@@ -35,24 +37,7 @@
 
 
 
-
-
-
-
-
-**TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
-
-- https://colab.research.google.com/drive/1DRbdWh7pWrKC28hN1RmgkOhKlOxhPm9X#scrollTo=NjKzw2TvZrOQ
-- https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/
-- https://app.roboflow.com/jack-fenton/trash-uavvaste/1
-
-- Try to get YOLO outputs meshing with SLAM
-  - This could be an issue because YOLO will label every single time the object is seen but we want 1 location per object
-  - Need to somehow merge them
-  - Look for papers using YOLO with slam and see if they have solutions
-  - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
-
-# Clone this repo and its submodules
+### Clone This Repository
 
 `git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
@@ -64,11 +49,10 @@ OR if git version is 2.23 or greater
 
 `git clone --recurse-submodules --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
-#### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
 
-## General requirements
+### General Dependencies
 
-### pip3
+#### pip3
 
 `sudo apt-get install python3-pip`
 
@@ -85,7 +69,7 @@ curl -sSL https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
 python3 get-pip.py "pip < 21.0"
 ````
 
-### ROS
+#### ROS
 
 Install ros-kinetic
 
@@ -116,6 +100,26 @@ To check whether this has been done on pre-installed ros, open `~/.bashrc` (`cod
 For any terminal shell that you wish to run ros commands from you must now run
 
 `source /opt/ros/kinetic/setup.bash` or for this specific project's catkin workspace `source ~/trash_parent_repo/catkin_ws/devel/setup.bash`
+
+
+**TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
+
+- https://colab.research.google.com/drive/1DRbdWh7pWrKC28hN1RmgkOhKlOxhPm9X#scrollTo=NjKzw2TvZrOQ
+- https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/
+- https://app.roboflow.com/jack-fenton/trash-uavvaste/1
+
+- Try to get YOLO outputs meshing with SLAM
+  - This could be an issue because YOLO will label every single time the object is seen but we want 1 location per object
+  - Need to somehow merge them
+  - Look for papers using YOLO with slam and see if they have solutions
+  - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
+
+# Clone this repo and its submodules
+
+
+#### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
+
+
 
 
 # ORB-SLAM3 and its ros wrapper
