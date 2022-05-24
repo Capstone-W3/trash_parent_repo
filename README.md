@@ -240,31 +240,6 @@ If OpenCV is only needed for the dependencies from other repos you can just inst
 
 
 
-
-
-
-
-
-
-
-**TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
-
-- https://colab.research.google.com/drive/1DRbdWh7pWrKC28hN1RmgkOhKlOxhPm9X#scrollTo=NjKzw2TvZrOQ
-- https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/
-- https://app.roboflow.com/jack-fenton/trash-uavvaste/1
-
-- Try to get YOLO outputs meshing with SLAM
-  - This could be an issue because YOLO will label every single time the object is seen but we want 1 location per object
-  - Need to somehow merge them
-  - Look for papers using YOLO with slam and see if they have solutions
-  - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
-
-
-
-
-
-
-
 #### Downloading datasets
 
 For EuRoC datasets go to http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/ and download
@@ -328,6 +303,21 @@ and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/i
 &nbsp; 
 
 &nbsp; 
+
+
+**TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
+
+- https://colab.research.google.com/drive/1DRbdWh7pWrKC28hN1RmgkOhKlOxhPm9X#scrollTo=NjKzw2TvZrOQ
+- https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/
+- https://app.roboflow.com/jack-fenton/trash-uavvaste/1
+
+- Try to get YOLO outputs meshing with SLAM
+  - This could be an issue because YOLO will label every single time the object is seen but we want 1 location per object
+  - Need to somehow merge them
+  - Look for papers using YOLO with slam and see if they have solutions
+  - [This uses YOLO with ORB-SLAM2 for a new SLAM algorithm](https://link.springer.com/article/10.1007/s00521-021-06764-3)
+
+
 
 ## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
