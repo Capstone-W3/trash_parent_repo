@@ -1,15 +1,16 @@
 
 
 
-## README Outline
+# README Outline
 
 1. [INTRODUCTION](#introduction)
 2. [EXPECTED KNOWLDGE](#expected-knowldege)
 3. [Setup Instructions](#setup-instructions)
-  - [Clone This Repository](#clone-this-repository)
-    - General Dependencies
-      1. [pip3](#pip3)
-      2. [ROS](#ros)
+  - First Install 
+    1. [Clone This Repository](#clone-this-repository)
+    2. General Dependencies
+      2.1. [pip3](#pip3)
+      2.2. [ROS](#ros)
   - [Speed Setup (Copy & Paste)](#speed-setup)
   - [Full Instructions](#full-instructions)
     1. [Complete Project](#)
@@ -19,7 +20,7 @@
 
 
 
-## Introduction
+# Introduction
 
 words
 
@@ -33,7 +34,11 @@ words
 
 words
 
-### Clone This Repository
+
+Setup Instructions Outline
+- C
+
+## Clone This Repository
 
 `git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
