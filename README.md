@@ -7,11 +7,13 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 1. [INTRODUCTION](#introduction)
 2. [EXPECTED KNOWLDGE](#expected-knowldege)
-3. [Setup Instructions](#setup-instructions)
-  - First Install 
+  - Ubuntu 16.04
+  - ROS (Kintetic)
+4. [Project Setup Instructions](#setup-instructions)
+  - Initial Downloads
     1. [Clone This Repository](#clone-this-repository)
     2. [General Dependencies](#general-dependencies)
-  - [Speed Setup (Copy & Paste)](#speed-setup)
+  - [Speed Setup (Just Copy & Paste)](#speed-setup)
   - [Full Instructions](#full-instructions)
     1. [Complete Project](#)
     2. [Just ORB-SLAM2](#)
@@ -20,28 +22,26 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 
 
-# Introduction
+# 1. Introduction
 
 words
 
-## Expected Knowldege
+## 2. Expected Knowldege
 
 words
 
 ---
 
-## Setup Instructions
+## 3. Setup Instructions
 
 words
 
-
-Setup Instructions Outline
+**Setup Instructions Outline**
 
 1. [Clone This Repository](#clone-this-repository)
-2. General Dependencies
-    2.1. [pip3](#pip3)
-  2.2. [ROS](#ros)
-  
+2. [General Dependencies](#general-dependencies)
+    1. [pip3](#pip3)
+    2.  [ROS](#ros)
 
 ## Clone This Repository
 
