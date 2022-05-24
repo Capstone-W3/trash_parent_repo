@@ -5,7 +5,7 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 # README Outline
 
-1. [INTRODUCTION](#introduction)
+1. [INTRODUCTION](#1-introduction)
 2. [EXPECTED KNOWLDGE](#expected-knowldege)
   - Ubuntu 16.04
   - ROS (Kintetic)
