@@ -31,7 +31,7 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 TRASH
 
-
+[Final Project Document](#Capstone_Project_Writeup.pdf)
 
 ## 2. Expected Knowldege
 
