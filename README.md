@@ -29,7 +29,7 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 # 1. Introduction
 
-words
+TRASH
 
 ## 2. Expected Knowldege
 
@@ -378,4 +378,9 @@ https://link.springer.com/article/10.1007/s00521-021-06764-3
 &nbsp;
 
 &nbsp;
+
+
+## Contact
+
+For any questions, reach out either to the group using our [team email](mailto:TrashTeamNEU@gmail.com) or [Jack's personal email](mailto:TrashTeamNEU@gmail.com)
 
