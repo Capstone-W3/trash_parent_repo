@@ -31,6 +31,8 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 TRASH
 
+
+
 ## 2. Expected Knowldege
 
 words
