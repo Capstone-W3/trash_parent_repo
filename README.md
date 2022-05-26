@@ -30,19 +30,25 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 # 1. Introduction
 
-TRASH 
+TRASH was designed as an application of robotics to the ever-present problem of trash collection. We focused our approach on litter pickup, particularly in spaces like highway shoulders and parking lots. Our approach focused on creating a modular solution that was not dependent on a particular implementation. We first map a space and identify the trash and then pick it up, which could be done by a heterogeneous two-robot system (like a mapping drone and a ground collection robot). However, since this is just a proof of concept we are only using a single robot. We use the TurtleBot2, which is essentially a Roomba for research, and custom designed a collection mechanism fastened to the front.
 
+Take a look at the [Final Project Document](Capstone_Project_Writeup.pdf) for a full understanding of the scope, goals, approach taken, and results of this project.
 
-[Final Project Document](Capstone_Project_Writeup.pdf)
 
 
 #### Software Overview
 
-The TRASH system ’s software has three distinct stages (as seen below). In the first stage, the TRASH system maps its environment using a customized version of ORBSlam, an open source Monocular SLAM solution which can accurately create point clouds given RGB and depth camera input. We trained YOLO, an image identification CNN, with our own dataset, then using it to identify and mark the locations of trash clusters on the map. We then render the 3D point cloud down to a 2D occupancy grid using a custom implementation of Octomap. It is from this 2D occupancy grid that the robot can navigate around an environment.
-Once the mapping stage is over, the TRASH system enters its second stage: general naviga- tion.The Turtlebot uses adaptive Monte Carlo localization (AMCL) to locate itself in the built map. That way it can identify obstacles and path plan around them to the trash cluster points labeled in that map.
+Each one of the software packages that make up different parts of the project are connected using ROS. Robot Operating System (ROS) is an open-source robotics middleware suite that handles communication between "nodes". Each node is able to publish data of different types that any other node in the network can subscribe to.
+
+The TRASH system’s software has three distinct stages (as seen below).
+
+In the first stage, the TRASH system maps its environment using a customized version of ORB-SLAM2, an open source Visual SLAM solution which can accurately create point clouds given RGB and depth camera input. We trained YOLO, an image identification CNN, with our own dataset, then using it to identify and mark the locations of trash clusters on the map. We then render the 3D point cloud down to a 2D occupancy grid using a custom implementation of Octomap. It is from this 2D occupancy grid that the robot can navigate around an environment.
+
+Once the mapping stage is over, the TRASH system enters its second stage: general navigation.The Turtlebot uses adaptive Monte Carlo localization (AMCL) to locate itself in the built map. That way it can identify obstacles and path plan around them to the trash cluster points labeled in that map.
 Upon reaching a cluster, the third stage begins. YOLO identifies trash in the RGB image from the Realsense Camera, and from the coordinates of the trash detection and the distance measurement received from the depth camera, calculates the position of the trash relative to the robot. Once it identifies the relative position of the trash, the robot turns towards its target, starts the collection mechanism motor, and moves towards it, picking up the trash piece. Upon successful collection, it returns to the general navigation stage, repeating on until all trash clusters have been visited.
 
 ![Image](TRASH_SoftwareOverview.png)
+Each ROS node in our network is represented by their own bubble
 
 ## 2. Expected Knowldege
 
