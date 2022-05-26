@@ -1,6 +1,6 @@
 # Terrestrial Roving Autonomous Scrap Harvester (TRASH)
 
-Welcome to the home repository for Northeastern's EECE Capstone team named TRASH. The TRASH system is designed to map out and pick up trash in a particular area. This file serves as a full guide to getting our codebase set up on your own machine. 
+Welcome to the home repository for Northeastern's EECE Capstone team named TRASH. The TRASH system is a robotics project designed to map out and pick up trash in a particular area. This file serves as a full guide to getting our codebase set up on your own machine.
 
 
 # README Outline
@@ -29,9 +29,19 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 # 1. Introduction
 
-TRASH
+TRASH 
+
 
 [Final Project Document](Capstone_Project_Writeup.pdf)
+
+
+#### Software Overview
+
+The TRASH system ’s software has three distinct stages (as seen below). In the first stage, the TRASH system maps its environment using a customized version of ORBSlam, an open source Monocular SLAM solution which can accurately create point clouds given RGB and depth camera input. We trained YOLO, an image identification CNN, with our own dataset, then using it to identify and mark the locations of trash clusters on the map. We then render the 3D point cloud down to a 2D occupancy grid using a custom implementation of Octomap. It is from this 2D occupancy grid that the robot can navigate around an environment.
+Once the mapping stage is over, the TRASH system enters its second stage: general naviga- tion.The Turtlebot uses adaptive Monte Carlo localization (AMCL) to locate itself in the built map. That way it can identify obstacles and path plan around them to the trash cluster points labeled in that map.
+Upon reaching a cluster, the third stage begins. YOLO identifies trash in the RGB image from the Realsense Camera, and from the coordinates of the trash detection and the distance measurement received from the depth camera, calculates the position of the trash relative to the robot. Once it identifies the relative position of the trash, the robot turns towards its target, starts the collection mechanism motor, and moves towards it, picking up the trash piece. Upon successful collection, it returns to the general navigation stage, repeating on until all trash clusters have been visited.
+
+
 
 ## 2. Expected Knowldege
 
