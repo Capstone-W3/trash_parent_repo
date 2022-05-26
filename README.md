@@ -42,7 +42,7 @@ The TRASH system ’s software has three distinct stages (as seen below). In the
 Once the mapping stage is over, the TRASH system enters its second stage: general naviga- tion.The Turtlebot uses adaptive Monte Carlo localization (AMCL) to locate itself in the built map. That way it can identify obstacles and path plan around them to the trash cluster points labeled in that map.
 Upon reaching a cluster, the third stage begins. YOLO identifies trash in the RGB image from the Realsense Camera, and from the coordinates of the trash detection and the distance measurement received from the depth camera, calculates the position of the trash relative to the robot. Once it identifies the relative position of the trash, the robot turns towards its target, starts the collection mechanism motor, and moves towards it, picking up the trash piece. Upon successful collection, it returns to the general navigation stage, repeating on until all trash clusters have been visited.
 
-
+![Image](TRASH_SoftwareOverview.png)
 
 ## 2. Expected Knowldege
 
