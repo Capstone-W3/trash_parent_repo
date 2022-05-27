@@ -62,18 +62,8 @@ This project uses a number of advanced technical solutions, but most of these do
 
 3.  ROS is essential to how the components of this project fit together. If you have never heard of or used ROS before, it may be worth reading up about it or doing some of the tutorials found on the [ROS website](http://wiki.ros.org/ROS/Introduction). However you must use [these instructions] to install ros-kinetic; DO NOT install ROS using the instructions from their website.
 
+4.  As is already evidenced by the format of this document, Github is an essential tool in setting up this project. We use git submodules, which allow for multiple git repositories to be linked whtin a single one. We use this parent repository to automatically structure all the dependent repositories for you. Look [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to learn more about submodules.
 
-
-
-
-#### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
-
-This repo contains submodules (forked from the original open source repos)
-Run the following command after cloning, and whenever you want the submodules update
-
-git submodule update --init --recursive
-
-To learn more about submodules, this link may help: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 
 ---
