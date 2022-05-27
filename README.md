@@ -14,11 +14,11 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
     - Initial Downloads
       1. [Clone This Repository](#clone-this-repository)
       2. [General Dependencies](#general-dependencies)
-    - [Speed Setup (Just Copy & Paste)](#speed-setup)
     - [Full Instructions](#full-instructions)
       1. [Complete Project](#)
       2. [Just ORB-SLAM2](#)
       3. [Just YOLOv4](#)
+    - [Speed Setup (Just Copy & Paste)](#speed-setup)
 4. [Project Run Instructions](#)
     - ORB-SLAM2
     - YOLOv4
@@ -56,11 +56,11 @@ Each ROS node in our network is represented by their own bubble
 
 This project uses a number of advanced technical solutions, but most of these do not need to be understood at least while setting up the code base.
 
-This project must be run on the Linux operating system Ubuntu (specifically 16.04). This project expects that you have some familiarity with Unix operating systems. If you do not already have Ubuntu 16.04 set up, you will need to create a virtual machine. I suggest [VMware Fusion](https://www.vmware.com/products/fusion.html) to run your [Ubuntu image](https://releases.ubuntu.com/16.04/). For more expansive directions look [here](https://graspingtech.com/vmware-fusion-ubuntu-18.04/). **You MUST use Ubuntu 16.04**
+1.  This project must be run on the Linux operating system Ubuntu (specifically 16.04). This project expects that you have some familiarity with Unix operating systems. If you do not already have Ubuntu 16.04 set up, you will need to create a virtual machine. I suggest [VMware Fusion](https://www.vmware.com/products/fusion.html) to run your [Ubuntu image](https://releases.ubuntu.com/16.04/). For more expansive directions look [here](https://graspingtech.com/vmware-fusion-ubuntu-18.04/). **You MUST use Ubuntu 16.04**
 
-Ubuntu 16.04 is end-of-life and no longer supported but any recent software updates, but our robot was unable to use anything newer. Most of the issues we ran into on the software front of this project stem from this fact. We were unable to update ROS beyond ros-kinetic and Python3 beyong Python3.5, which each cause a number of issues in themselves. 
+2.  Ubuntu 16.04 is end-of-life and no longer supported but any recent software updates, but our robot was unable to use anything newer. Most of the issues we ran into on the software front of this project stem from this fact. We were unable to update ROS beyond ros-kinetic and Python3 beyong Python3.5, which each cause a number of issues in themselves. 
 
-ROS is essential to how the components of this project fit together. If you have never heard of or used ROS before, it may be worth reading up about it or doing some of the tutorials found on the [ROS website](http://wiki.ros.org/ROS/Introduction). However you must use [these instructions] to install ros-kinetic; DO NOT install ROS using the instructions from their website.
+3.  ROS is essential to how the components of this project fit together. If you have never heard of or used ROS before, it may be worth reading up about it or doing some of the tutorials found on the [ROS website](http://wiki.ros.org/ROS/Introduction). However you must use [these instructions] to install ros-kinetic; DO NOT install ROS using the instructions from their website.
 
 
 
