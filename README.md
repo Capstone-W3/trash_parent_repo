@@ -36,7 +36,7 @@ Take a look at the [Final Project Document](Capstone_Project_Writeup.pdf) for a 
 
 
 
-#### Software Overview
+### Software Overview
 
 Each one of the software packages that make up different parts of the project are connected using ROS. Robot Operating System (ROS) is an open-source robotics middleware suite that handles communication between "nodes". Each node is able to publish data of different types that any other node in the network can subscribe to.
 
@@ -50,9 +50,18 @@ Upon reaching a cluster, the third stage begins. YOLO identifies trash in the RG
 ![Image](TRASH_SoftwareOverview.png)
 Each ROS node in our network is represented by their own bubble
 
+
 ## 2. Expected Knowldege
 
-words
+
+
+This project uses a number of advanced technical solutions, but most of these do not need to be understood at least while setting up the code base.
+
+This project must be run on the Linux operating system Ubuntu (specifically 16.04). This project expects that you have some familiarity with Unix operating systems. If you do not already have Ubuntu 16.04 set up, you will need to create a virtual machine. I suggest [VMware Fusion](https://www.vmware.com/products/fusion.html) to run your [Ubuntu image](https://releases.ubuntu.com/16.04/). For more expansive directions look [here](https://graspingtech.com/vmware-fusion-ubuntu-18.04/). **You MUST use Ubuntu 16.04**
+
+
+
+
 
 #### THIS PROJECT ASSUMES WORKING ON UBUNTU 16.04 WITH ROS-KINETIC AND PYTHON3.5, THERE ARE MANY FIXES IMPLEMENTED THIS CONFIGURATION THAT WOULD NOT BE REQUIRED ON OTHER SYSTEMS
 
@@ -63,7 +72,9 @@ git submodule update --init --recursive
 
 To learn more about submodules, this link may help: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
+
 ---
+
 
 ## 3. Setup Instructions
 
