@@ -77,6 +77,8 @@ This project uses a number of advanced technical solutions, but most of these do
 
 After installing Ubuntu 16.04 as discussed in [2](#2-expected-knowldege), continue by following the instructions from each section in this guide
 
+For the ease of consistency across each install of this project, we will assume that it is being installed directly in the home directory. If you are not doing this, you will need to fix the directory of installs whereever an absolute path is given (if you do not know what this means, don't worry and just run as instructed).
+
 **Setup Instructions Outline**
 
 1. [Clone This Repository](#clone-this-repository)
@@ -127,6 +129,9 @@ Install ros-kinetic
 
 http://wiki.ros.org/kinetic/Installation/Ubuntu
 
+
+Open a new command line window
+
 `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
 
 `sudo apt install curl`
@@ -165,24 +170,27 @@ For any terminal shell that you wish to run ros commands from you must now run
 
 
 
-## ORB-SLAM2
+# ORB-SLAM2
 
-#### ORB-SLAM2 Outline
+### ORB-SLAM2 Outline
 
 - [Dependency Installs](#orb-slam2-dependencies)
     1. CMAKE
     2. Eigen3
     3. Pangolin
     4. OpenCV
-- Building ORB-SLAM2
+- [Building ORB-SLAM2](ORB-SLAM2 Iteself)
 
 If desired you can jump directly to [running ORB-SLAM2](running-orb-slam2)
 
-### ORB-SLAM2 Dependencies
+## ORB-SLAM2 Dependencies
 
-#### CMake
+### CMake
 
 Requires updated version of CMake, but many way of doing this update will break a pre-installed ros implementation
+
+
+Open a new command line window (you do not want to use a window that has already sourced ROS)
 
 ````
 cd $HOME
@@ -199,9 +207,12 @@ echo 'export CMAKE_PREFIX_PATH=$HOME/cmake-3.22.2:$CMAKE_PREFIX_PATH' >> ~/.bash
 
 Check that everything worked using `cmake --version`
 
-#### Eigen3
+### Eigen3
 
 Install version 3.3.9 of Eigen3 because it doesn't recognize the base version, [as seen here](https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/eigen/eigen-3.3.7/index.html)
+
+
+Open a new command line window
 
 ````
 cd $HOME
@@ -215,7 +226,10 @@ cmake ..
 sudo make install
 ````
 
-#### Pangolin
+### Pangolin
+
+
+Open a new command line window
 
 ````
 cd ~/trash_parent_repo/Pangolin
@@ -231,7 +245,10 @@ The checkout to `v0.6` resolves issue [#715](https://github.com/stevenlovegrove/
 
 The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this will default to the home directory but can be changed
 
-#### OpenCV
+### OpenCV
+
+
+Open a new command line window
 
 ````
 cd ~/trash_parent_repo/opencv
@@ -272,22 +289,10 @@ If OpenCV is only needed for the dependencies from other repos you can just inst
 
 
 
-#### Downloading datasets
 
-For EuRoC datasets go to http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/ and download
+## ORB-SLAM2 Itself
+###### [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
-If using http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/, download the zip file and unzip it in downloads
-
-#### Run sample data
-
-Then from `ORB_SLAM3` try
-
-````
-cd Examples
---------
-````
-
-### orb_slam3_ros_wrapper ([repo](https://github.com/thien94/orb_slam3_ros_wrapper))
 
 must be contained within the catkin workspace
 
