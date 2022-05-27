@@ -64,6 +64,10 @@ This project uses a number of advanced technical solutions, but most of these do
 
 4.  As is already evidenced by the format of this document, Github is an essential tool in setting up this project. We use git submodules, which allow for multiple git repositories to be linked whtin a single one. We use this parent repository to automatically structure all the dependent repositories for you. Look [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to learn more about submodules.
 
+5.  Though not essential to getting the codebase set up, knowledge of robotics techniques SLAM and Computer Vision would be very helpful understanding what is being done in this project. To learn more about these respective topics you can read their papers: [ORB-SLAM2](http://webdiis.unizar.es/~raulmur/MurMontielTardosTRO15.pdf) and [YOLO](https://arxiv.org/pdf/1506.02640.pdf) (or [YOLOv4](https://arxiv.org/pdf/2004.10934.pdf)).
+
+6.  All code snippets shown in this guide (`visible here`) are meant to be run in a command-line window
+
 
 
 ---
