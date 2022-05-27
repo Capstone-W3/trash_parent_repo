@@ -75,7 +75,7 @@ This project uses a number of advanced technical solutions, but most of these do
 
 ## 3. Setup Instructions
 
-words
+After installing Ubuntu 16.04 as discussed in [2](#2-expected-knowldege), continue by following the instructions from each section in this guide
 
 **Setup Instructions Outline**
 
