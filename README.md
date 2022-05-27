@@ -86,20 +86,25 @@ words
 
 ## Clone This Repository
 
+Open a command line window and then
+
+`git clone --recurse-submodules --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
+
+OR if git version is less than 2.23
+
 `git clone --recurse-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
-Then need to go through and checkout to the remote tracking branch in each
+Then need to go through and checkout to the remote tracking branch in each submodule
 
 `git submodule update --recursive --remote`
 
-OR if git version is 2.23 or greater
-
-`git clone --recurse-submodules --remote-submodules https://github.com/Capstone-W3/trash_parent_repo.git`
 
 
 ## General Dependencies
 
 ### pip3
+
+Open a new command line window and then
 
 `sudo apt-get install python3-pip`
 
