@@ -184,7 +184,7 @@ For any terminal shell that you wish to run ros commands from you must now run
     2. [Eigen3](#eigen3)
     3. [Pangolin](#pangolin)
     4. [OpenCV](#opencv)
-- [Building ORB-SLAM2](#ORB-SLAM2 Iteself)
+- [Building ORB-SLAM2](#build-orb-slam2)
 
 If desired you can jump directly to [running ORB-SLAM2](running-orb-slam2)
 
@@ -295,7 +295,7 @@ If OpenCV is only needed for the dependencies from other repos you can just inst
 
 
 
-## ORB-SLAM2 Itself
+## Build ORB-SLAM2
 ###### using [instal instructions](#https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close#3-installation-example) from [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
 ````
@@ -321,17 +321,6 @@ Then either [install YOLO](#) or [run ORB-SLAM2](#)
 
 
 
-#### To run with gridmap
-
-`roslaunch orb_slam3_ros_wrapper orb_slam3_mono_gridmap.launch`
-
-and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/)
-
-`rosbag play V1_01_easy.bag`
-
-
-
-
 
 
 &nbsp; 
@@ -339,6 +328,10 @@ and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/i
 &nbsp; 
 
 &nbsp; 
+
+# YOLOv4
+### YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
+
 
 
 **TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
@@ -355,7 +348,7 @@ and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/i
 
 
 
-## YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
+
 
 ### How to train YOLO
 
