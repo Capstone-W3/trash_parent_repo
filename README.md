@@ -175,11 +175,11 @@ For any terminal shell that you wish to run ros commands from you must now run
 ### ORB-SLAM2 Outline
 
 - [Dependency Installs](#orb-slam2-dependencies)
-    1. CMAKE
-    2. Eigen3
-    3. Pangolin
-    4. OpenCV
-- [Building ORB-SLAM2](ORB-SLAM2 Iteself)
+    1. [CMAKE](#cmake)
+    2. [Eigen3](#eigen3)
+    3. [Pangolin](#pangolin)
+    4. [OpenCV](#opencv)
+- [Building ORB-SLAM2](#ORB-SLAM2 Iteself)
 
 If desired you can jump directly to [running ORB-SLAM2](running-orb-slam2)
 
@@ -291,34 +291,30 @@ If OpenCV is only needed for the dependencies from other repos you can just inst
 
 
 ## ORB-SLAM2 Itself
-###### [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
-
-
-must be contained within the catkin workspace
-
-If the parent repo was not cloned to `$HOME`, follow instructions from above to update CMakeLists.txt with correct path
-
-~~git clone https://github.com/thien94/orb_slam3_ros_wrapper.git~~
-
-Make sure to have run:
-`source /opt/ros/kinetic/setup.bash` but don't add to ~/ .bashrc
+###### using [instal instructions](#https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close#3-installation-example) from [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
 ````
-cd catkin_ws
-catkin init
-
-cd src/orb_slam3_ros_wrapper
-git checkout master
-cd ../..
-
-catkin build
+cd ~/trash-parent-repo/catkin_ws/src
+cd ORB-SLAM2_ROS
+git checkout no_loop_close
 ````
 
-The steps described [here](https://github.com/thien94/orb_slam3_ros_wrapper#2-orb_slam3_ros_wrapper-this-package) for setting directories of ORB_SLAM and Vocabulary have already been done for the default location and structure of this repo, `$HOME/trash_parent_repo`
+Create execution privileges for all installation scripts:
+````
+cd ORB-SLAM2_ROS/ORB_SLAM2
+sudo chmod +x build*
+````
 
-Install dependency for their publishers 
+Then run the main build script:
+````
+./build_catkin.sh
+````
 
-`sudo apt-get install ros-kinetic-hector-trajectory-server`
+Then either [install YOLO](#) or [run ORB-SLAM2](#)
+
+
+
+
 
 #### To run with gridmap
 
@@ -327,8 +323,6 @@ Install dependency for their publishers
 and run with bag downloaded from [EuRoC](http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/)
 
 `rosbag play V1_01_easy.bag`
-
-
 
 
 
