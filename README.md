@@ -333,7 +333,7 @@ Then either [install YOLO](#) or [run ORB-SLAM2](#)
 ### YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
 
-### ORB-SLAM2 Outline
+### YOLOv4 Outline
 
 - [YOLOv4 Intro](#yolo-intro)
 - [Train YOLO]
@@ -352,6 +352,14 @@ Though you will want to run YOLO on the Ubuntu system, it is likely not the best
 ### Build Darknet-ROS
 
 
+
+
+
+&nbsp; 
+
+&nbsp; 
+
+&nbsp; 
 
 **TRAIN YOLO USING GOOGLE COLAB AND ROBOFLOW FOR DATASET SETUP**
 
