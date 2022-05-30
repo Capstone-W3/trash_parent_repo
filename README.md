@@ -81,8 +81,9 @@ For the ease of consistency across each install of this project, we will assume 
 
 **Setup Instructions Outline**
 
-1.1. [Clone This Repository](#clone-this-repository)
-1.2. [General Dependencies](#general-dependencies)
+1. [Clone This Repository](#clone-this-repository)
+2. [Repository Structure](
+3. [General Dependencies](#general-dependencies)
     1. [pip3](#pip3)
     2.  [ROS](#ros)
 
@@ -100,6 +101,10 @@ Then need to go through and checkout to the remote tracking branch in each submo
 
 `git submodule update --recursive --remote`
 
+
+## Repository Structure
+
+This repository is structured such that you do not need to clone any other code. Everything is already set up in this repository. All non-ROS dependencies are found at the top level, while all ROS packages you will build are found inside `catkin_ws/src`. Once every thing has been cloned it would be a good idea to run `catkin init` from inside `catkin_ws` to initialize the catkin workspace for ROS.
 
 
 ## General Dependencies
