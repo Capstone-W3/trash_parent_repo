@@ -81,8 +81,8 @@ For the ease of consistency across each install of this project, we will assume 
 
 **Setup Instructions Outline**
 
-1. [Clone This Repository](#clone-this-repository)
-2. [General Dependencies](#general-dependencies)
+1.1. [Clone This Repository](#clone-this-repository)
+1.2. [General Dependencies](#general-dependencies)
     1. [pip3](#pip3)
     2.  [ROS](#ros)
 
