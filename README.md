@@ -351,7 +351,7 @@ Then either [install YOLO](#install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 
 ### YOLO Intro
 
-YOLO is a CNN-based (convolutional neural network) object detector that excels at fast and accurate identification on an image-by-image basis. It is able to accomplish this performance using a custom-built framework called darknet, instead of more general-purpose frameworks like tensorflow or pytorch. While this project will be using YOLO, the way to do this is using the darknet repository. 
+YOLO is a CNN-based (convolutional neural network) object detector that excels at fast and accurate identification on an image-by-image basis. It is able to accomplish this performance using a custom-built framework called darknet, instead of more general-purpose frameworks like tensorflow or pytorch. While this project will be using YOLO, the actual code is found in the darknet repository. 
 
 For deeper information check out the actual [darknet repository](https://github.com/AlexeyAB/darknet) and its instructions on how to [train darknet to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects).
 
