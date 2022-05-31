@@ -66,8 +66,12 @@ This project uses a number of advanced technical solutions, but most of these do
 6.  All code snippets shown in this guide (`visible here`) are meant to be run in a command-line window
 
 
+&nbsp; 
 
 ---
+---
+
+&nbsp; 
 
 
 ## 3. Setup Instructions
@@ -315,7 +319,7 @@ Then run the main build script:
 ./build_catkin.sh
 ````
 
-Then either [install YOLO](#) or [run ORB-SLAM2](#)
+Then either [install YOLO](#install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 
 
 &nbsp; 
@@ -333,7 +337,7 @@ Then either [install YOLO](#) or [run ORB-SLAM2](#)
 
 - [YOLOv4 Intro](#yolo-intro)
 - [Train YOLO](#train-yolo)
-- [Build Darknet-ROS]
+- [Build Darknet-ROS](#build-darknet-ros)
 
 
 
