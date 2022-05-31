@@ -319,14 +319,9 @@ Then run the main build script:
 Then either [install YOLO](#) or [run ORB-SLAM2](#)
 
 
-
-
-
-
-
 &nbsp; 
 
-&nbsp; 
+---
 
 &nbsp; 
 
