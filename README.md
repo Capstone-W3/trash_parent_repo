@@ -14,11 +14,9 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
     - Initial Downloads
       1. [Clone This Repository](#clone-this-repository)
       2. [General Dependencies](#general-dependencies)
-    - [Full Instructions](#full-instructions)
-      1. [Complete Project](#)
-      2. [Just ORB-SLAM2](#)
-      3. [Just YOLOv4](#)
-    - [Speed Setup (Just Copy & Paste)](#speed-setup)
+    - Repository Components
+      1. [ORB-SLAM2](#orb-slam2)
+      2. [YOLOv4](#yolov4)
 4. [Project Run Instructions](#)
     - ORB-SLAM2
     - YOLOv4
@@ -82,7 +80,7 @@ For the ease of consistency across each install of this project, we will assume 
 **Setup Instructions Outline**
 
 1. [Clone This Repository](#clone-this-repository)
-2. [Repository Structure](
+2. [Repository Structure](#repository-structure)
 3. [General Dependencies](#general-dependencies)
     1. [pip3](#pip3)
     2.  [ROS](#ros)
