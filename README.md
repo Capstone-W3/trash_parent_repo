@@ -15,12 +15,11 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
       1. [Clone This Repository](#clone-this-repository)
       2. [General Dependencies](#general-dependencies)
     - Repository Components
-      1. [ORB-SLAM2](#orb-slam2)
-      2. [YOLOv4](#yolov4)
+      1. [Build ORB-SLAM2](#install-orb-slam2)
+      2. [Build YOLOv4](#install-yolov4)
 4. [Project Run Instructions](#)
-    - ORB-SLAM2
-    - YOLOv4
-    - Full Project
+    - [Run ORB-SLAM2](#run-orb-slam2)
+    - [Run YOLOv4](#install-yolov4)
 
 5. [Contact Us](#contact)
 
@@ -173,7 +172,7 @@ For any terminal shell that you wish to run ros commands from you must now run
 
 
 
-# ORB-SLAM2
+# Install ORB-SLAM2
 
 ##### [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
@@ -326,7 +325,7 @@ Then either [install YOLO](#) or [run ORB-SLAM2](#)
 &nbsp; 
 
 
-# YOLOv4
+# Install YOLOv4
 ### YOLO ROS: Real-Time Object Detection for ROS ([repository](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
 
@@ -382,7 +381,7 @@ Then to use the custom trained detection objects, follow [these instructions](ht
 
 # 4. Project Run Instructions
 
-## ORB-SLAM2
+## Run ORB-SLAM2
 
 ORB-SLAM2 is a ROS package, editing or running it will require resourcing the catkin workspace
 
@@ -442,7 +441,7 @@ rosrun rviz rviz -d orb_slam2_ros/rviz/orb_slam2_ros.rviz
 ````
 
 
-## YOLOv4
+## Run YOLOv4
 
 
 
