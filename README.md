@@ -373,30 +373,6 @@ After this finishes, there should files `obj.data`, `obj.names`, yolov4-tiny-cus
 ### Build Darknet-ROS
 
 
-
-
-
-&nbsp; 
-
-&nbsp; 
-
-&nbsp; 
-
-
-
-
-### How to train YOLO
-
-
-
-A Google-Colab Jupyter Notebook ([original](https://colab.research.google.com/drive/1mzL6WyY9BRx4xX476eQdhKDnd_eixBlG) and [ours](https://colab.research.google.com/drive/1kx2XSdisVOBt_QT3J2TVJZ3M8XsQMy_k)) is being used for the actual training of the model to use free GPUs for training that doesn't take days.
-
-
-
-
-### How to use trained YOLO model in ROS
-
-
 Open a new command line window
 
 ````
@@ -408,6 +384,7 @@ catkin build darknet_ros
 ````
 
 Then to use the custom trained detection objects, follow [these instructions](https://github.com/leggedrobotics/darknet_ros#use-your-own-detection-objects). You will use the files saved to the Google Drive. Once these files have been added and all appropriate files changed, rebuild Darknet: `catkin build darknet_ros`.
+
 
 
 
