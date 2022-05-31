@@ -48,6 +48,14 @@ Upon reaching a cluster, the third stage begins. YOLO identifies trash in the RG
 Each ROS node in our network is represented by their own bubble
 
 
+&nbsp; 
+
+---
+---
+
+&nbsp; 
+
+
 ## 2. Expected Knowldege
 
 
