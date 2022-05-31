@@ -237,7 +237,7 @@ sudo make install
 Open a new command line window
 
 ````
-cd ~/trash_parent_repo/Pangolin
+cd $HOME/trash_parent_repo/Pangolin
 ./scripts/install_prerequisites.sh recommended
 git checkout v0.6
 
@@ -256,7 +256,7 @@ The `-DEigen3_DIR` flag must point to where you put eigen3, I set it up so this 
 Open a new command line window
 
 ````
-cd ~/trash_parent_repo/opencv
+cd $HOME/trash_parent_repo/opencv
 git -C opencv checkout 3.4
 mkdir -p build && cd build
 cmake .. -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local
@@ -299,9 +299,9 @@ If OpenCV is only needed for the dependencies from other repos you can just inst
 ###### using [install instructions](#https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close#3-installation-example) from [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
 ````
-cd ~/trash-parent-repo/catkin_ws
+cd $HOME/trash-parent-repo/catkin_ws
 source devel/setup.bash
-cd src/ORB-SLAM2_ROS
+cd src/ORB-SLAM2_ROS/ORB_SLAM2
 git checkout no_loop_close
 ````
 
@@ -369,7 +369,7 @@ After this finishes, there should files `obj.data`, `obj.names`, yolov4-tiny-cus
 Open a new command line window
 
 ````
-cd ~/trash_parent_repo/catkin_ws
+cd $HOME/trash_parent_repo/catkin_ws
 source devel/setup.bash
 cd src/darknet_ros
 git checkout 1.1.5
@@ -394,7 +394,7 @@ source devel/setup.bash
 After building the project for the first time, use the faster shell script
 
 ````
-cd src/ORB-SLAM2_ROS
+cd src/ORB-SLAM2_ROS/ORB_SLAM2
 ./build_catkin_novocab.sh
 ````
 
@@ -415,7 +415,7 @@ This guide assumes you will be running the project using just a rosbag, if you a
 
 ````
 source /opt/ros/kinetic/devel/setup.bash
-cd ~/Downloads
+cd $HOME/Downloads
 rosbag play orbslam_success.bag --topics /camera/aligned_depth_to_color/image_raw /camera/color/image_raw
 ````
 
@@ -423,7 +423,24 @@ Then once the bag is playing open a new terminal
 
 (If you are having issues with the bag playing back inconsistently, this is likely due to images being skipped to maintain the desired frame rate, to fix this append `-r 0.5` to the end of that command to play at half speed)
 
-3. Open a 
+3. Open a third shell to run ORB-SLAM from
+
+````
+cd $HOME/trash_parent_repo/catkin_ws
+source devel/setup.bash
+cd src/ORB-SLAM2_ROS/ORB_SLAM2
+roslaunch orb_slam2_ros realsense_rgbd.launch
+````
+
+4. If you want to see the visualization of the ORB-SLAM2 outputs, open a fourth window
+
+````
+cd $HOME/trash_parent_repo/catkin_ws
+source devel/setup.bash
+cd src/ORB-SLAM2_ROS/ORB_SLAM2
+rosrun rviz rviz -d orb_slam2_ros/rviz/orb_slam2_ros.rviz
+````
+
 
 ## YOLOv4
 
