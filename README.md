@@ -459,6 +459,7 @@ cd src/ORB-SLAM2_ROS/ORB_SLAM2
 rosrun rviz rviz -d orb_slam2_ros/rviz/orb_slam2_ros.rviz
 ````
 
+![ORB-SLAM2 Mapping](ORB_SLAM2_Mapping.png)
 
 ## Run YOLOv4
 
@@ -480,6 +481,7 @@ Or if running on a live robot
 roslaunch darknet_ros trash_darknet_ros.launch
 ````
 
+![YOLO Identification](YOLO_identification.jpg)
 
 &nbsp;
 
