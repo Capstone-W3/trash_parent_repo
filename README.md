@@ -347,7 +347,21 @@ Then either [install YOLO](#) or [run ORB-SLAM2](#)
 
 ### Train YOLO
 
-Though you will want to run YOLO on the Ubuntu system, it is likely not the best platform on which to actually train for object detection. When I tried training on my virtual machine, it predicted that a full training session would take a few weeks time. 
+Though you will want to run YOLO on the Ubuntu system, it is likely not the best platform on which to actually train for object detection. When I tried training on my virtual machine, it predicted that a full training session would take a few weeks time. Instead, we take advantage of the free GPU resources provided by Google Colab. One of the developers of the Darknet repository wrote an initial Jupyter notebook that can be used with Colab, [found here](https://colab.research.google.com/drive/1_GdoqCJWXsChrOiY8sZMr_zbr_fH-0Fg).
+
+We will not be using this original notebook, but instead one that I wrote that takes advantage of Roboflow. [This notebook](https://colab.research.google.com/drive/1_gh-wwvgG9RkmaINIpQANOGtZ-Yranhc#scrollTo=eyO4xO43PB2v) is written to be easily used to train the darknet architecture with a dataset from Roboflow. One of the best features provided is that it will automatically link with your Google Drive. As the program runs it will save all configuration files and weights files as they are written locally. This means that even if you disconnect from the Collab servers, you won't have to start over from scratch.
+
+If you are using our dataset, [this notebook](https://colab.research.google.com/drive/1_gh-wwvgG9RkmaINIpQANOGtZ-Yranhc#scrollTo=eyO4xO43PB2v) does not need to be edited at all. If you are using another dataset, possibly with a different number of labels, a few things will need to be changed. 
+
+Changes:
+- In Roboflow go to [Versions](https://app.roboflow.com/trash-northeastern/trash-uavvaste/1), Export the Download Code for "YOLO Darknet" and paste it into the Jupyter notebook [here](https://colab.research.google.com/drive/1kx2XSdisVOBt_QT3J2TVJZ3M8XsQMy_k#scrollTo=Cdj4tmT5Cmdl&line=1&uniqifier=1)
+- In the [cell for obj.data](https://colab.research.google.com/drive/1kx2XSdisVOBt_QT3J2TVJZ3M8XsQMy_k#scrollTo=KiCILEbs1NII&line=4&uniqifier=1), change the line with `out.write(classes = ` to the number of classes you are training for. For us this is probably just 1 (`rubbish`)
+- In the [cell for custom-yolov4-tiny-detector.cfg](https://colab.research.google.com/drive/1kx2XSdisVOBt_QT3J2TVJZ3M8XsQMy_k#scrollTo=U_WJcqHhpeVr&line=5&uniqifier=1), change the line `max_batches` to (`classes*2000` but not less than number of training images, and not less than `6000`), f.e. `max_batches=6000` if you train for `3` classes
+
+Then should be good to run each cell in the notebook to train. This will take a while
+
+After this finishes, there should files `obj.data`, `obj.names`, yolov4-tiny-custom.cfg, and `yolov4-tiny-custom_best.weights` all saved in your Google Drive folder. These will be used for running Darknet with ROS.
+
 
 ### Build Darknet-ROS
 
