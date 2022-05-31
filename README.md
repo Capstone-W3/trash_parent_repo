@@ -380,6 +380,52 @@ Then to use the custom trained detection objects, follow [these instructions](ht
 
 
 
+# 4. Project Run Instructions
+
+## ORB-SLAM2
+
+ORB-SLAM2 is a ROS package, editing or running it will require resourcing the catkin workspace
+
+````
+cd $HOME/trash_parent_repo/catkin_ws
+source devel/setup.bash
+````
+
+After building the project for the first time, use the faster shell script
+
+````
+cd src/ORB-SLAM2_ROS
+./build_catkin_novocab.sh
+````
+
+1. As with all ROS project, you will first need to open a shell for the roscore
+````
+source /opt/ros/kinetic/devel/setup.bash
+roscore
+````
+
+2. Then open a new window to play the bag file from
+
+
+This guide assumes you will be running the project using just a rosbag, if you are instead using real-time data your process will slightly change.
+
+- First you will need to locate the rosbag file that you will be using and download it (lets say its `orbslam_success.bag`). 
+- Then you need to verify the rostopic names for the topic you need, `rosbag info orbslam_success.bag`. 
+        - The only topic you will need to play back is the image topic, which will look something like `/camera/aligned_depth_to_color/image_raw /camera/color/image_raw`
+
+````
+source /opt/ros/kinetic/devel/setup.bash
+cd ~/Downloads
+rosbag play orbslam_success.bag --topics /camera/aligned_depth_to_color/image_raw /camera/color/image_raw
+````
+
+Then once the bag is playing open a new terminal 
+
+(If you are having issues with the bag playing back inconsistently, this is likely due to images being skipped to maintain the desired frame rate, to fix this append `-r 0.5` to the end of that command to play at half speed)
+
+3. Open a 
+
+## YOLOv4
 
 
 
