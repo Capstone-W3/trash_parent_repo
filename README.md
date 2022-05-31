@@ -197,7 +197,7 @@ For any terminal shell that you wish to run ros commands from you must now run
     4. [OpenCV](#opencv)
 - [Building ORB-SLAM2](#build-orb-slam2)
 
-If desired you can jump directly to [running ORB-SLAM2](run-orb-slam2)
+If desired you can jump directly to [running ORB-SLAM2](#run-orb-slam2)
 
 ## ORB-SLAM2 Dependencies
 
