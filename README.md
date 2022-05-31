@@ -351,6 +351,8 @@ Then either [install YOLO](#install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 
 ### YOLO Intro
 
+TODO: INTRO
+
 For deeper information check out the actual [Darknet](https://github.com/AlexeyAB/darknet) repo and its instructions on how to [train to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
 
 Following Roboflow general instructions for [Training YOLOv4 on a Custom Dataset](https://blog.roboflow.com/training-yolov4-on-a-custom-dataset/), but due to our limited processing power using [YOLOv4-tiny instructions](https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/)
@@ -461,6 +463,23 @@ rosrun rviz rviz -d orb_slam2_ros/rviz/orb_slam2_ros.rviz
 
 ## Run YOLOv4
 
+Running YOLO is very easy after everything has been built. Just run the launch file that for your setup after sourcing the workspace. 
+roslaunch darknet_ros trash_darknet_ros.launch
+
+````
+cd $HOME/trash_parent_repo/catkin_ws
+source devel/setup.bash
+cd src/darknet_ros
+````
+
+If running in simulation (playing data from a rosbag):
+````
+roslaunch darknet_ros trash_darknet_ros_sim.launch
+````
+Or if running on a live robot
+````
+roslaunch darknet_ros trash_darknet_ros.launch
+````
 
 
 &nbsp;
