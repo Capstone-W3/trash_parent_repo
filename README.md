@@ -177,6 +177,8 @@ For any terminal shell that you wish to run ros commands from you must now run
 
 # ORB-SLAM2
 
+##### [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
+
 ### ORB-SLAM2 Outline
 
 - [Dependency Installs](#orb-slam2-dependencies)
@@ -296,7 +298,7 @@ If OpenCV is only needed for the dependencies from other repos you can just inst
 
 
 ## Build ORB-SLAM2
-###### using [instal instructions](#https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close#3-installation-example) from [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
+###### using [install instructions](#https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close#3-installation-example) from [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
 ````
 cd ~/trash-parent-repo/catkin_ws
@@ -330,8 +332,9 @@ Then either [install YOLO](#) or [run ORB-SLAM2](#)
 
 &nbsp; 
 
+
 # YOLOv4
-### YOLO ROS: Real-Time Object Detection for ROS ([repo](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
+### YOLO ROS: Real-Time Object Detection for ROS ([repository](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
 
 ### YOLOv4 Outline
@@ -393,12 +396,21 @@ A Google-Colab Jupyter Notebook ([original](https://colab.research.google.com/dr
 
 ### How to use trained YOLO model in ROS
 
+
+Open a new command line window
+
+````
+cd ~/trash_parent_repo/catkin_ws
+source devel/setup.bash
+cd src/darknet_ros
+git checkout 1.1.5
+catkin build darknet_ros
 ````
 
-cd catkin_workspace/src
-git checkout 1.1.5
-catkin build
-````
+Then to use the custom trained detection objects, follow [these instructions](https://github.com/leggedrobotics/darknet_ros#use-your-own-detection-objects). You will use the files saved to the Google Drive. Once these files have been added and all appropriate files changed, rebuild Darknet: `catkin build darknet_ros`.
+
+
+
 
 Getting what I have found to be a segmentation fault as soon as first image is read in [here](https://answers.ros.org/question/300753/how-to-read-ros-log-file/) and [here](https://github.com/leggedrobotics/darknet_ros/issues/205)
 
