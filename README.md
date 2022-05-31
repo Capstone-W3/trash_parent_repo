@@ -494,3 +494,5 @@ roslaunch darknet_ros trash_darknet_ros.launch
 
 For any questions, reach out either to the group using our [team email](mailto:TrashTeamNEU@gmail.com) or [Jack's personal email](mailto:TrashTeamNEU@gmail.com)
 
+We will be happy to work through any encountered issues and update this guide to reflect any necessary changes
+
