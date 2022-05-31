@@ -378,6 +378,12 @@ catkin build darknet_ros
 Then to use the custom trained detection objects, follow [these instructions](https://github.com/leggedrobotics/darknet_ros#use-your-own-detection-objects). You will use the files saved to the Google Drive. Once these files have been added and all appropriate files changed, rebuild Darknet: `catkin build darknet_ros`.
 
 
+&nbsp; 
+
+---
+---
+
+&nbsp; 
 
 # 4. Project Run Instructions
 
