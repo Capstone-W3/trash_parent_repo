@@ -351,14 +351,11 @@ Then either [install YOLO](#install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 
 ### YOLO Intro
 
-YOLO is a CNN-based (convolutional neural network) object detector that excels at fast and accurate identification on an image-by-image basis. It is able to accomplish this performance using a custom-built framework called darknet, instead of more general-purpose frameworks like tensorflow or pytorch. While this project will be using YOLO, the actual code is found in the darknet repository. 
+YOLO is a CNN-based (convolutional neural network) object detector that excels at fast and accurate identification on an image-by-image basis. It is able to accomplish this performance using a custom-built framework called darknet, instead of more general-purpose frameworks like tensorflow or pytorch. While this project will be using YOLO, the actual code is found in the darknet repository. One important thing to note is that there are multiple layer configurations possible for YOLO: yolov4 (173 convolutional layers) and yolov4-tiny (27 convolutional layers). YOLOv4-tiny is much smaller but we have chosen to use it due to its extreme increase in speed, allowing us to use it on a system with limited computational resources. 
 
 For deeper information check out the actual [darknet repository](https://github.com/AlexeyAB/darknet) and its instructions on how to [train darknet to detect custom objects](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects).
 
-
-
-Following Roboflow general instructions for [Training YOLOv4 on a Custom Dataset](https://blog.roboflow.com/training-yolov4-on-a-custom-dataset/), but due to our limited processing power using [YOLOv4-tiny instructions](https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/)
-
+We will be using a tool called [Roboflow](https://roboflow.com/) to store and label our data. This tool proved to be very helpful for training, allowing us to easily access all the training data from the Jupyter Notebook that takes advantage of Google Collab and it provides a nice graphical user interface to make data labelling much easier.
 
 ### Train YOLO
 
