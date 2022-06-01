@@ -204,10 +204,10 @@ For any terminal shell that you wish to run ros commands from you must now run
 ### ORB-SLAM2 Outline
 
 - [Dependency Installs](#orb-slam2-dependencies)
-    1. [CMAKE](#cmake)
-    2. [Eigen3](#eigen3)
-    3. [Pangolin](#pangolin)
-    4. [OpenCV](#opencv)
+    - 1\. [CMAKE](#cmake)
+    - 2\. [Eigen3](#eigen3)
+    - 3\. [Pangolin](#pangolin)
+    - 4\. [OpenCV](#opencv)
 - [Building ORB-SLAM2](#build-orb-slam2)
 
 If desired you can jump directly to [running ORB-SLAM2](#run-orb-slam2)
