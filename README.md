@@ -6,26 +6,26 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 # README Outline
 
-1. [Introduction](#1-introduction)
+- 1\. [Introduction](#1-introduction)
     - [Software Overview](#software-overview)
-2. [Expected Knowledge](#2-expected-knowldege)
+- 2\. [Expected Knowledge](#2-expected-knowldege)
     - Ubuntu 16.04
     - ROS (Kintetic)
-3. [Project Setup Instructions](#3-setup-instructions)
+- 3\. [Project Setup Instructions](#3-setup-instructions)
     - Initial Downloads
-      3.1. [Clone This Repository](#3-1-clone-this-repository)
-      3.2. [Repository Structure](#3-2-repository-structure)
-      3.3. [General Dependencies](#3-3-general-dependencies)
+      - 3.1. [Clone This Repository](#31-clone-this-repository)
+      - 3.2. [Repository Structure](#32-repository-structure)
+      - 3.3. [General Dependencies](#33-general-dependencies)
     - Repository Component Installs
-      3.4. [Build ORB-SLAM2](#3-4-install-orb-slam2)
-      3.5. [Build YOLOv4](#3-5-install-yolov4)
-4. [Project Run Instructions](#4-project-run-instructions)
+      - 3.4. [Build ORB-SLAM2](#34-install-orb-slam2)
+      - 3.5. [Build YOLOv4](#35-install-yolov4)
+- 4\. [Project Run Instructions](#4-project-run-instructions)
     - [Run ORB-SLAM2](#run-orb-slam2)
     - [Run YOLOv4](#run-yolov4)
 
-5. [Contact Us](#contact)
+- 5\. [Contact Us](#contact)
 
-
+[Clone This Repository](#3-a-clone-this-repository)
 
 # 1. Introduction
 
@@ -92,13 +92,13 @@ For the ease of consistency across each install of this project, we will assume 
 
 **Setup Instructions Outline**
 
-3.1. [Clone This Repository](#3-1-clone-this-repository)
-3.2. [Repository Structure](#3-2-repository-structure)
-3.3. [General Dependencies](#3-3-general-dependencies)
-    1.  [pip3](#pip3)
-    2.  [ROS](#ros)
-3.4. [Build ORB-SLAM2](#3-4-install-orb-slam2)
-3.5. [Build YOLOv4](#3-5-install-yolov4)
+- 3.1. [Clone This Repository](#31-clone-this-repository)
+- 3.2. [Repository Structure](#32-repository-structure)
+- 3.3. [General Dependencies](#33-general-dependencies)
+    - 1.  [pip3](#pip3)
+    - 2.  [ROS](#ros)
+- 3.4. [Build ORB-SLAM2](#34-install-orb-slam2)
+- 3.5. [Build YOLOv4](#35-install-yolov4)
 
 ## 3.1. Clone This Repository
 
@@ -331,7 +331,7 @@ Then run the main build script:
 ./build_catkin.sh
 ````
 
-Then either [install YOLO](#3-5-install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
+Then either [install YOLO](#35-install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 
 
 &nbsp; 
