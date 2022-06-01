@@ -6,17 +6,19 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 # README Outline
 
-1. [INTRODUCTION](#1-introduction)
-2. [EXPECTED KNOWLDGE](#2-expected-knowldege)
+1. [Introduction](#1-introduction)
+    - [Software Overview](#software-overview)
+2. [Expected Knowledge](#2-expected-knowldege)
     - Ubuntu 16.04
     - ROS (Kintetic)
 3. [Project Setup Instructions](#3-setup-instructions)
     - Initial Downloads
-      1. [Clone This Repository](#clone-this-repository)
-      2. [General Dependencies](#general-dependencies)
-    - Repository Components
-      1. [Build ORB-SLAM2](#install-orb-slam2)
-      2. [Build YOLOv4](#install-yolov4)
+      3.1. [Clone This Repository](#3-1-clone-this-repository)
+      3.2. [Repository Structure](#3-2-repository-structure)
+      3.3. [General Dependencies](#3-3-general-dependencies)
+    - Repository Component Installs
+      3.4. [Build ORB-SLAM2](#3-4-install-orb-slam2)
+      3.5. [Build YOLOv4](#3-5-install-yolov4)
 4. [Project Run Instructions](#4-project-run-instructions)
     - [Run ORB-SLAM2](#run-orb-slam2)
     - [Run YOLOv4](#run-yolov4)
@@ -90,13 +92,15 @@ For the ease of consistency across each install of this project, we will assume 
 
 **Setup Instructions Outline**
 
-1. [Clone This Repository](#clone-this-repository)
-2. [Repository Structure](#repository-structure)
-3. [General Dependencies](#general-dependencies)
-    1. [pip3](#pip3)
+3.1. [Clone This Repository](#3-1-clone-this-repository)
+3.2. [Repository Structure](#3-2-repository-structure)
+3.3. [General Dependencies](#3-3-general-dependencies)
+    1.  [pip3](#pip3)
     2.  [ROS](#ros)
+3.4. [Build ORB-SLAM2](#3-4-install-orb-slam2)
+3.5. [Build YOLOv4](#3-5-install-yolov4)
 
-## Clone This Repository
+## 3.1. Clone This Repository
 
 Open a command line window and then
 
@@ -111,12 +115,12 @@ Then need to go through and checkout to the remote tracking branch in each submo
 `git submodule update --recursive --remote`
 
 
-## Repository Structure
+## 3.2. Repository Structure
 
 This repository is structured such that you do not need to clone any other code. Everything is already set up in this repository. All non-ROS dependencies are found at the top level, while all ROS packages you will build are found inside `catkin_ws/src`. Once every thing has been cloned it would be a good idea to run `catkin init` from inside `catkin_ws` to initialize the catkin workspace for ROS.
 
 
-## General Dependencies
+## 3.3. General Dependencies
 
 ### pip3
 
@@ -184,7 +188,7 @@ For any terminal shell that you wish to run ros commands from you must now run
 
 
 
-# Install ORB-SLAM2
+# 3.4. Install ORB-SLAM2
 
 ##### [source repository](https://github.com/Capstone-W3/ORB-SLAM2_ROS/tree/no_loop_close)
 
@@ -327,7 +331,7 @@ Then run the main build script:
 ./build_catkin.sh
 ````
 
-Then either [install YOLO](#install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
+Then either [install YOLO](#3-5-install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 
 
 &nbsp; 
@@ -337,7 +341,7 @@ Then either [install YOLO](#install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
 &nbsp; 
 
 
-# Install YOLOv4
+# 3.5. Install YOLOv4
 ### YOLO ROS: Real-Time Object Detection for ROS ([repository](https://github.com/leggedrobotics/darknet_ros/tree/1.1.5))
 
 
