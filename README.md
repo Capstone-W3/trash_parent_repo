@@ -20,8 +20,8 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
       - 3.4. [Build ORB-SLAM2](#34-install-orb-slam2)
       - 3.5. [Build YOLOv4](#35-install-yolov4)
 - 4\. [Project Run Instructions](#4-project-run-instructions)
-    - [Run ORB-SLAM2](#run-orb-slam2)
-    - [Run YOLOv4](#run-yolov4)
+    - [Run ORB-SLAM2](#41-run-orb-slam2)
+    - [Run YOLOv4](#42-run-yolov4)
 
 - 5\. [Contact Us](#contact)
 
@@ -210,7 +210,7 @@ For any terminal shell that you wish to run ros commands from you must now run
     - 4\. [OpenCV](#opencv)
 - [Building ORB-SLAM2](#build-orb-slam2)
 
-If desired you can jump directly to [running ORB-SLAM2](#run-orb-slam2)
+If desired you can jump directly to [running ORB-SLAM2](#41-run-orb-slam2)
 
 ## ORB-SLAM2 Dependencies
 
@@ -340,7 +340,7 @@ Then run the main build script:
 ./build_catkin.sh
 ````
 
-Then either [install YOLO](#35-install-yolov4) or [run ORB-SLAM2](#run-orb-slam2)
+Then either [install YOLO](#35-install-yolov4) or [run ORB-SLAM2](#41-run-orb-slam2)
 
 
 &nbsp; 
@@ -413,7 +413,7 @@ Then to use the custom trained detection objects, follow [these instructions](ht
 
 # 4. Project Run Instructions
 
-## Run ORB-SLAM2
+## 4.1. Run ORB-SLAM2
 
 ORB-SLAM2 is a ROS package, editing or running it will require resourcing the catkin workspace
 
@@ -474,7 +474,7 @@ rosrun rviz rviz -d orb_slam2_ros/rviz/orb_slam2_ros.rviz
 
 ![ORB-SLAM2 Mapping](ORB_SLAM2_Mapping.png)
 
-## Run YOLOv4
+## 4.2. Run YOLOv4
 
 Running YOLO is very easy after everything has been built. Just run the launch file that for your setup after sourcing the workspace. 
 roslaunch darknet_ros trash_darknet_ros.launch
