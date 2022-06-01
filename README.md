@@ -509,3 +509,5 @@ For any questions, reach out either to the group using our [team email](mailto:T
 
 We will be happy to work through any encountered issues and update this guide to reflect any necessary changes
 
+
+**Note: All photos used are original and all code has been linked to where appropriate**
