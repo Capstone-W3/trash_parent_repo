@@ -20,8 +20,8 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
       - 3.4. [Build ORB-SLAM2](#34-install-orb-slam2)
       - 3.5. [Build YOLOv4](#35-install-yolov4)
 - 4\. [Project Run Instructions](#4-project-run-instructions)
-    - [Run ORB-SLAM2](#41-run-orb-slam2)
-    - [Run YOLOv4](#42-run-yolov4)
+    - 4.1. [Run ORB-SLAM2](#41-run-orb-slam2)
+    - 4.2. [Run YOLOv4](#42-run-yolov4)
 
 - 5\. [Contact Us](#contact)
 
