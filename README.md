@@ -25,7 +25,6 @@ Welcome to the home repository for Northeastern's EECE Capstone team named TRASH
 
 - 5\. [Contact Us](#contact)
 
-[Clone This Repository](#3-a-clone-this-repository)
 
 # 1. Introduction
 
@@ -98,7 +97,17 @@ For the ease of consistency across each install of this project, we will assume 
     - 1.  [pip3](#pip3)
     - 2.  [ROS](#ros)
 - 3.4. [Build ORB-SLAM2](#34-install-orb-slam2)
+    - [Dependency Installs](#orb-slam2-dependencies)
+        1. [CMAKE](#cmake)
+        2. [Eigen3](#eigen3)
+        3. [Pangolin](#pangolin)
+        4. [OpenCV](#opencv)
+    - [Building ORB-SLAM2](#build-orb-slam2)
 - 3.5. [Build YOLOv4](#35-install-yolov4)
+    - [YOLOv4 Intro](#yolo-intro)
+    - [Train YOLO](#train-yolo)
+    - [Build Darknet-ROS](#build-darknet-ros)
+
 
 ## 3.1. Clone This Repository
 
